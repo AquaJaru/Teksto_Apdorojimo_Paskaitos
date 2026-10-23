@@ -189,7 +189,7 @@ for query in queries:
 
 results_df = pd.DataFrame(results)
 
-# Run B – pradinis TF-IDF
+
 results_df[
     results_df["model"] == "Pradinis TF-IDF"
 ].to_csv(
@@ -198,7 +198,7 @@ results_df[
     encoding="utf-8-sig"
 )
 
-# Run C – pakeistas TF-IDF
+
 results_df[
     results_df["model"] == "Pakeistas TF-IDF"
 ].to_csv(
@@ -207,8 +207,7 @@ results_df[
     encoding="utf-8-sig"
 )
 
-# Išsaugomi ir visi rezultatai viename faile,
-# kaip buvo pradiniame kode.
+
 results_df.to_csv(
     "experiment_results.csv",
     index=False,
