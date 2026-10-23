@@ -1,0 +1,26 @@
+﻿query,model,recommended_title,author,similarity,matches_initial_analysis
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pakeistas TF-IDF,Essays on the Latin Orient,"Miller, William",0.3672,True
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pakeistas TF-IDF,Arms and the Man,"Shaw, Bernard",0.3002,False
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pakeistas TF-IDF,"The Earth and its inhabitants, Volume 1: Europe. Greece, Turkey in Europe, Rumania, Servia, Montenegro, Italy, Spain, and Portugal.","Reclus, Elisée",0.254,False
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pakeistas TF-IDF,Hero Tales and Legends of the Serbians,"Petrovitch, Woislav M.",0.2202,False
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pakeistas TF-IDF,The Poems of Sappho: An Interpretative Rendition into English,Sappho,0.2123,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pakeistas TF-IDF,"A scarlet poppy, and other stories","Spofford, Harriet Elizabeth Prescott",0.5716,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pakeistas TF-IDF,The Belle of Bowling Green,"Barr, Amelia E.",0.4909,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pakeistas TF-IDF,The Open Boat and Other Stories,"Crane, Stephen",0.484,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pakeistas TF-IDF,Tales of the Jazz Age,"Fitzgerald, F. Scott (Francis Scott)",0.4741,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pakeistas TF-IDF,And life is better,"Hull, Helen R. (Helen Rose)",0.4719,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pakeistas TF-IDF,Alice's Adventures in Wonderland,"Carroll, Lewis",0.6539,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pakeistas TF-IDF,"Alice's Adventures Under Ground Being a facsimile of the original Ms. book afterwards developed into ""Alice's Adventures in Wonderland""","Carroll, Lewis",0.5912,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pakeistas TF-IDF,Through the Looking-Glass,"Carroll, Lewis",0.5717,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pakeistas TF-IDF,"Alice in Wonderland, Retold in Words of One Syllable","Carroll, Lewis",0.5704,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pakeistas TF-IDF,Alice's Adventures in Wonderland Illustrated by Arthur Rackham. With a Proem by Austin Dobson,"Carroll, Lewis",0.5408,False
+"The Battle of the Books, and other Short Pieces",Pakeistas TF-IDF,"Bacon's Essays, and Wisdom of the Ancients","Bacon, Francis",0.4417,True
+"The Battle of the Books, and other Short Pieces",Pakeistas TF-IDF,Europe and elsewhere,"Twain, Mark",0.426,False
+"The Battle of the Books, and other Short Pieces",Pakeistas TF-IDF,The Idle Thoughts of an Idle Fellow,"Jerome, Jerome K. (Jerome Klapka)",0.4204,False
+"The Battle of the Books, and other Short Pieces",Pakeistas TF-IDF,Modern Essays,,0.3951,False
+"The Battle of the Books, and other Short Pieces",Pakeistas TF-IDF,Suspended Judgments: Essays on Books and Sensations,"Powys, John Cowper",0.3935,False
+The Suffrage Cook Book,Pakeistas TF-IDF,"History of Woman Suffrage, Volume I",,0.6107,True
+The Suffrage Cook Book,Pakeistas TF-IDF,The Complete Book of Cheese,"Brown, Bob",0.596,False
+The Suffrage Cook Book,Pakeistas TF-IDF,"History of Woman Suffrage, Volume II",,0.5908,True
+The Suffrage Cook Book,Pakeistas TF-IDF,"The History of Woman Suffrage, Volume V",,0.5848,True
+The Suffrage Cook Book,Pakeistas TF-IDF,"History of Woman Suffrage, Volume III",,0.5791,True

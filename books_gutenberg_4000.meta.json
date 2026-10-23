@@ -1,0 +1,17 @@
+{
+  "built": "2026-09-25",
+  "rows": 4000,
+  "candidates_after_filters": 38521,
+  "source": "Project Gutenberg feeds: pg_catalog.csv + rdf-files.tar.bz2 (https://www.gutenberg.org/cache/epub/feeds/)",
+  "selection": "English text books, >=2 subject headings, unique title, top 4000 by 30-day downloads",
+  "columns": {
+    "book_id": "Project Gutenberg ebook number",
+    "title": "title (whitespace normalised)",
+    "author": "first author; editors/illustrators excluded",
+    "author_birth_year": "birth year of that author, if known",
+    "subjects": "library subject headings separated by ' ; '",
+    "bookshelves": "Gutenberg bookshelves and categories separated by ' ; '",
+    "downloads": "downloads in the 30 days before the feed date"
+  },
+  "licence": "Metadata is public domain; see https://www.gutenberg.org/policy/"
+}

@@ -1,0 +1,26 @@
+﻿query,model,recommended_title,author,similarity,matches_initial_analysis
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pradinis TF-IDF,Essays on the Latin Orient,"Miller, William",0.3672,True
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pradinis TF-IDF,Arms and the Man,"Shaw, Bernard",0.2703,False
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pradinis TF-IDF,"The Earth and its inhabitants, Volume 1: Europe. Greece, Turkey in Europe, Rumania, Servia, Montenegro, Italy, Spain, and Portugal.","Reclus, Elisée",0.254,False
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pradinis TF-IDF,Hero Tales and Legends of the Serbians,"Petrovitch, Woislav M.",0.217,False
+The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey,Pradinis TF-IDF,Afghanistan,"Hamilton, A. (Angus)",0.1884,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pradinis TF-IDF,"A scarlet poppy, and other stories","Spofford, Harriet Elizabeth Prescott",0.5112,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pradinis TF-IDF,The Belle of Bowling Green,"Barr, Amelia E.",0.4709,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pradinis TF-IDF,"A Book for a Rainy Day; or, Recollections of the Events of the Years 1766-1833","Smith, John Thomas",0.4692,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pradinis TF-IDF,And life is better,"Hull, Helen R. (Helen Rose)",0.4508,False
+As I Remember Recollections of American Society during the Nineteenth Century,Pradinis TF-IDF,The Open Boat and Other Stories,"Crane, Stephen",0.4249,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pradinis TF-IDF,Alice's Adventures in Wonderland,"Carroll, Lewis",0.6272,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pradinis TF-IDF,"Alice's Adventures Under Ground Being a facsimile of the original Ms. book afterwards developed into ""Alice's Adventures in Wonderland""","Carroll, Lewis",0.5732,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pradinis TF-IDF,"Alice in Wonderland, Retold in Words of One Syllable","Carroll, Lewis",0.5481,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pradinis TF-IDF,Through the Looking-Glass,"Carroll, Lewis",0.5479,False
+"Alice in Wonderland A Dramatization of Lewis Carroll's ""Alice's Adventures in Wonderland"" and ""Through the Looking Glass""",Pradinis TF-IDF,Alice's Adventures in Wonderland Illustrated by Arthur Rackham. With a Proem by Austin Dobson,"Carroll, Lewis",0.5216,False
+"The Battle of the Books, and other Short Pieces",Pradinis TF-IDF,Europe and elsewhere,"Twain, Mark",0.4429,False
+"The Battle of the Books, and other Short Pieces",Pradinis TF-IDF,"Bacon's Essays, and Wisdom of the Ancients","Bacon, Francis",0.4339,True
+"The Battle of the Books, and other Short Pieces",Pradinis TF-IDF,The Idle Thoughts of an Idle Fellow,"Jerome, Jerome K. (Jerome Klapka)",0.4129,False
+"The Battle of the Books, and other Short Pieces",Pradinis TF-IDF,Modern Essays,,0.3881,False
+"The Battle of the Books, and other Short Pieces",Pradinis TF-IDF,Suspended Judgments: Essays on Books and Sensations,"Powys, John Cowper",0.3865,False
+The Suffrage Cook Book,Pradinis TF-IDF,"History of Woman Suffrage, Volume I",,0.6107,True
+The Suffrage Cook Book,Pradinis TF-IDF,The Complete Book of Cheese,"Brown, Bob",0.596,False
+The Suffrage Cook Book,Pradinis TF-IDF,"History of Woman Suffrage, Volume II",,0.5908,True
+The Suffrage Cook Book,Pradinis TF-IDF,"The History of Woman Suffrage, Volume V",,0.5848,True
+The Suffrage Cook Book,Pradinis TF-IDF,"History of Woman Suffrage, Volume III",,0.5791,True
