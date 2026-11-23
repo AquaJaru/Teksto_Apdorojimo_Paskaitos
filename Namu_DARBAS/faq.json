@@ -1,0 +1,72 @@
+[
+  {
+    "intent": "working_hours",
+    "question": "What are the library's opening hours?",
+    "answer": "The library is open Monday to Friday 9:00–18:00 and Saturday 10:00–15:00. The library is closed on Sundays. This is a sample schedule."
+  },
+  {
+    "intent": "membership",
+    "question": "How do I become a library reader?",
+    "answer": "To become a library reader, come to the library with an ID document and fill in a registration form. Registration is free in this example."
+  },
+  {
+    "intent": "borrowing",
+    "question": "How do I get or borrow a book?",
+    "answer": "To borrow a book, find the publication you want in the library catalogue or on the shelves, check that it is available, and ask a library staff member or use a self-service point. If you are not yet a reader, please register first."
+  },
+  {
+    "intent": "borrow_period",
+    "question": "How long can I keep a borrowed book?",
+    "answer": "Books can normally be borrowed for 30 days. If nobody has reserved the book, the loan period can be extended."
+  },
+  {
+    "intent": "renewal",
+    "question": "How do I extend a book's return deadline?",
+    "answer": "You can extend a book's return deadline by logging in to your reader account or by asking a library staff member. Renewal may not be possible if another reader has reserved the publication."
+  },
+  {
+    "intent": "reservation",
+    "question": "How do I reserve a book?",
+    "answer": "You can reserve a book in the library's online catalogue: find the publication, open its details and choose the reservation option. You will receive a notification when the book is ready."
+  },
+  {
+    "intent": "late_fee",
+    "question": "Do I have to pay a fine for returning a book late?",
+    "answer": "This demo prototype does not include late fees, but if a book is returned late, your ability to borrow other publications may be temporarily restricted. Please check the actual rules at your library."
+  },
+  {
+    "intent": "ebooks",
+    "question": "Does the library offer e-books?",
+    "answer": "Yes, some e-books can be read online through the library's digital resources catalogue. Availability depends on the publication and the services the library provides."
+  },
+  {
+    "intent": "computers",
+    "question": "Does the library have computers and internet?",
+    "answer": "Yes, in this example visitors can use the library's computers and free wireless internet in the reading room."
+  },
+  {
+    "intent": "location",
+    "question": "Where is the library?",
+    "answer": "The library's sample address is 1 Library Street, in the city centre. Replace this address with the address of the real library you choose."
+  },
+  {
+    "intent": "contact",
+    "question": "How can I contact the library?",
+    "answer": "In this example you can contact the library by email at info@library.example or by phone at +1 555 000 0000. These are sample contact details and should be replaced."
+  },
+  {
+    "intent": "study_rooms",
+    "question": "Can I reserve a study room?",
+    "answer": "If the library has group work or study rooms, they can be reserved at the front desk or in the online booking system. Please ask a library staff member about available times."
+  },
+  {
+    "intent": "greeting",
+    "question": "Hello",
+    "answer": "Hello! I am the library assistant. You can ask me about opening hours, registration, borrowing, renewals, reservations, e-books, computers, study rooms, the library's location or how to contact us."
+  },
+  {
+    "intent": "thanks",
+    "question": "Thank you",
+    "answer": "You're welcome! Let me know if you have any other questions about the library."
+  }
+]

@@ -1,0 +1,1166 @@
+[
+  {
+    "text": "What are the library's opening hours?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "When is the library open?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "When are you open?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "What are the library's working hours?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "What time does the library open?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "What time does the library close?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Is the library open on Saturday?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Are you open on Sundays?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "When can I come to the library?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Until what time is the library open?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "What is the opening schedule?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Which days is the library open?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Is the library open today?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "How do I become a library reader?",
+    "intent": "membership"
+  },
+  {
+    "text": "How do I register at the library?",
+    "intent": "membership"
+  },
+  {
+    "text": "I want to become a reader",
+    "intent": "membership"
+  },
+  {
+    "text": "How do I get a reader card?",
+    "intent": "membership"
+  },
+  {
+    "text": "What do I need to bring to register?",
+    "intent": "membership"
+  },
+  {
+    "text": "Is registration at the library paid?",
+    "intent": "membership"
+  },
+  {
+    "text": "How do I become a library member?",
+    "intent": "membership"
+  },
+  {
+    "text": "How do I get a library card?",
+    "intent": "membership"
+  },
+  {
+    "text": "What documents are needed for registration?",
+    "intent": "membership"
+  },
+  {
+    "text": "Can I register online?",
+    "intent": "membership"
+  },
+  {
+    "text": "Who can become a library reader?",
+    "intent": "membership"
+  },
+  {
+    "text": "How do I join the library?",
+    "intent": "membership"
+  },
+  {
+    "text": "Where do I register for the library?",
+    "intent": "membership"
+  },
+  {
+    "text": "How do I get or borrow a book?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How can I get a book?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How do I borrow a book?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "I want to take a book from the library",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How do I borrow books?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "Where do I pick up a book?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "Can I take a book home?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "What do I need to do to get a book?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How are books checked out?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "Can I borrow several books?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How many books can I take at one time?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How do I take a publication out of the library?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "I want to borrow a publication",
+    "intent": "borrowing"
+  },
+  {
+    "text": "Can books be taken home?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How does book lending work?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "Where do I go to borrow a book?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How long can I keep a borrowed book?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "When do I have to return the book?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How many days can I keep a book?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "What is the book loan period?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "For how long are books lent?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "When does the loan period end?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How long can I keep a library book?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "When do I need to bring the book back?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "Within what time do I have to return the item?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How long is a book lent for?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "What is the return date?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How do I extend the book's return deadline?",
+    "intent": "renewal"
+  },
+  {
+    "text": "Can I extend the book's due date?",
+    "intent": "renewal"
+  },
+  {
+    "text": "I want to extend the loan period of a borrowed book",
+    "intent": "renewal"
+  },
+  {
+    "text": "How do I renew a book loan?",
+    "intent": "renewal"
+  },
+  {
+    "text": "Where can I renew a book?",
+    "intent": "renewal"
+  },
+  {
+    "text": "Is it possible to extend the return date?",
+    "intent": "renewal"
+  },
+  {
+    "text": "How do I extend the use of a publication?",
+    "intent": "renewal"
+  },
+  {
+    "text": "How do I renew a book online?",
+    "intent": "renewal"
+  },
+  {
+    "text": "Can I renew a book by phone?",
+    "intent": "renewal"
+  },
+  {
+    "text": "I need more time to read the book",
+    "intent": "renewal"
+  },
+  {
+    "text": "How do I renew the book loan period?",
+    "intent": "renewal"
+  },
+  {
+    "text": "How do I reserve a book?",
+    "intent": "reservation"
+  },
+  {
+    "text": "Can I order a book in advance?",
+    "intent": "reservation"
+  },
+  {
+    "text": "I want to reserve a publication",
+    "intent": "reservation"
+  },
+  {
+    "text": "How do I order a book online?",
+    "intent": "reservation"
+  },
+  {
+    "text": "How can I find out if a book is available?",
+    "intent": "reservation"
+  },
+  {
+    "text": "Is it possible to reserve a book?",
+    "intent": "reservation"
+  },
+  {
+    "text": "Where can I reserve the book I want?",
+    "intent": "reservation"
+  },
+  {
+    "text": "How do I place a book reservation?",
+    "intent": "reservation"
+  },
+  {
+    "text": "I want the book to be waiting for me",
+    "intent": "reservation"
+  },
+  {
+    "text": "Can I reserve a book that is currently checked out?",
+    "intent": "reservation"
+  },
+  {
+    "text": "How do I pick up a reserved book?",
+    "intent": "reservation"
+  },
+  {
+    "text": "Where can I find the reservation feature?",
+    "intent": "reservation"
+  },
+  {
+    "text": "Do I have to pay a fine for returning a book late?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "What happens if I return a book late?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Are late fees charged?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Is there a fine for being late?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "I returned a book late, what should I do?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "How much does a late return cost?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Are people fined for returning a book late?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "What will happen if I do not return the book on time?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Do I have to pay for being late?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Can I return a book after the due date?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "What are the consequences of returning a publication late?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Does the library offer e-books?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Where can I find e-books?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Can I read books online?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Do you have e-books?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "How do I borrow an e-book?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Does the library have digital publications?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Can I read e-books at home?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "How do I use the e-book catalogue?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Are there books in PDF format?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Can I read books on my phone?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Do you provide an electronic publications service?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Does the library have computers and internet?",
+    "intent": "computers"
+  },
+  {
+    "text": "Can I use a computer?",
+    "intent": "computers"
+  },
+  {
+    "text": "Is there free Wi-Fi?",
+    "intent": "computers"
+  },
+  {
+    "text": "Does the library have internet access?",
+    "intent": "computers"
+  },
+  {
+    "text": "Where can I connect to the internet?",
+    "intent": "computers"
+  },
+  {
+    "text": "Are computers available to visitors?",
+    "intent": "computers"
+  },
+  {
+    "text": "Are there computers in the reading room?",
+    "intent": "computers"
+  },
+  {
+    "text": "Can I bring my own laptop?",
+    "intent": "computers"
+  },
+  {
+    "text": "Does the library have wireless internet?",
+    "intent": "computers"
+  },
+  {
+    "text": "Can I use the internet for free?",
+    "intent": "computers"
+  },
+  {
+    "text": "Where is the computer room?",
+    "intent": "computers"
+  },
+  {
+    "text": "Where is the library?",
+    "intent": "location"
+  },
+  {
+    "text": "What is the library's address?",
+    "intent": "location"
+  },
+  {
+    "text": "How can I find you?",
+    "intent": "location"
+  },
+  {
+    "text": "Where is the library located?",
+    "intent": "location"
+  },
+  {
+    "text": "Which building are you in?",
+    "intent": "location"
+  },
+  {
+    "text": "How do I get to the library?",
+    "intent": "location"
+  },
+  {
+    "text": "Tell me the library's location",
+    "intent": "location"
+  },
+  {
+    "text": "Where is the library based?",
+    "intent": "location"
+  },
+  {
+    "text": "What is the exact address?",
+    "intent": "location"
+  },
+  {
+    "text": "How do I walk to the library?",
+    "intent": "location"
+  },
+  {
+    "text": "Where is your branch?",
+    "intent": "location"
+  },
+  {
+    "text": "How can I contact the library?",
+    "intent": "contact"
+  },
+  {
+    "text": "What is your phone number?",
+    "intent": "contact"
+  },
+  {
+    "text": "Where can I write to the library?",
+    "intent": "contact"
+  },
+  {
+    "text": "Give me the library's email",
+    "intent": "contact"
+  },
+  {
+    "text": "How can I get in touch with you?",
+    "intent": "contact"
+  },
+  {
+    "text": "Where can I find the contact details?",
+    "intent": "contact"
+  },
+  {
+    "text": "I want to call the library",
+    "intent": "contact"
+  },
+  {
+    "text": "What is the library's email address?",
+    "intent": "contact"
+  },
+  {
+    "text": "How can I contact you by phone?",
+    "intent": "contact"
+  },
+  {
+    "text": "Who will answer my question?",
+    "intent": "contact"
+  },
+  {
+    "text": "Where do I go for information?",
+    "intent": "contact"
+  },
+  {
+    "text": "Can I reserve a study room?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Can I book a study room in advance?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Do you have group work rooms?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Where can I study in peace?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Does the library have a reading room?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "How do I book a study spot?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Do I need to reserve a workspace?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Is there a room for group work?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Can I study at the library?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Where do I book a study room?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Is there a quiet zone in the library?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Where are you located?",
+    "intent": "location"
+  },
+  {
+    "text": "Where are you?",
+    "intent": "location"
+  },
+  {
+    "text": "What is your address?",
+    "intent": "location"
+  },
+  {
+    "text": "Where can I find the library?",
+    "intent": "location"
+  },
+  {
+    "text": "How can I reach the library?",
+    "intent": "contact"
+  },
+  {
+    "text": "What is your email?",
+    "intent": "contact"
+  },
+  {
+    "text": "What are your contact details?",
+    "intent": "contact"
+  },
+  {
+    "text": "What are your hours?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "What time are you open?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "opening hours",
+    "intent": "working_hours"
+  },
+  {
+    "text": "What are your hours on weekends?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Is the library open on public holidays?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Do you close for lunch?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "What time do you close today?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Is the library open late in the evening?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Are you open on Mondays?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "What days are you closed?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Is the library open now?",
+    "intent": "working_hours"
+  },
+  {
+    "text": "Library timetable please",
+    "intent": "working_hours"
+  },
+  {
+    "text": "How do I sign up for a library card?",
+    "intent": "membership"
+  },
+  {
+    "text": "Can I join the library?",
+    "intent": "membership"
+  },
+  {
+    "text": "Is it free to join?",
+    "intent": "membership"
+  },
+  {
+    "text": "What do I need to sign up?",
+    "intent": "membership"
+  },
+  {
+    "text": "I would like to get a library card",
+    "intent": "membership"
+  },
+  {
+    "text": "Do I need an ID to register?",
+    "intent": "membership"
+  },
+  {
+    "text": "Can children get a library card?",
+    "intent": "membership"
+  },
+  {
+    "text": "How old do I have to be to join?",
+    "intent": "membership"
+  },
+  {
+    "text": "Can I register without coming in person?",
+    "intent": "membership"
+  },
+  {
+    "text": "Where can I get a membership?",
+    "intent": "membership"
+  },
+  {
+    "text": "How do I check out a book?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "I would like to check out a book",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How many books can I check out?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "Can I borrow books with my library card?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "What is the borrowing limit?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How do I take out a book?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "Is there a limit on how many books I can borrow?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "Can I use the self-checkout machine?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "I want to loan a book",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How do I get a book from the shelf?",
+    "intent": "borrowing"
+  },
+  {
+    "text": "How long is the loan period?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How long can I borrow a book for?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "What is the due date for borrowed books?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How many weeks can I keep a book?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "When is my book due?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How long do I have before I must return a book?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "What is the lending period?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How many days do I have to return a book?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "How long can I keep a book at home?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "When must books be returned?",
+    "intent": "borrow_period"
+  },
+  {
+    "text": "Can I renew my book?",
+    "intent": "renewal"
+  },
+  {
+    "text": "How do I renew a loan?",
+    "intent": "renewal"
+  },
+  {
+    "text": "I want to renew my books",
+    "intent": "renewal"
+  },
+  {
+    "text": "Can I extend my loan?",
+    "intent": "renewal"
+  },
+  {
+    "text": "How do I get more time with a book?",
+    "intent": "renewal"
+  },
+  {
+    "text": "Is it possible to renew a book online?",
+    "intent": "renewal"
+  },
+  {
+    "text": "Can I keep the book longer?",
+    "intent": "renewal"
+  },
+  {
+    "text": "How many times can I renew a book?",
+    "intent": "renewal"
+  },
+  {
+    "text": "Renew book",
+    "intent": "renewal"
+  },
+  {
+    "text": "Can I prolong my loan period?",
+    "intent": "renewal"
+  },
+  {
+    "text": "Can I place a hold on a book?",
+    "intent": "reservation"
+  },
+  {
+    "text": "How do I put a book on hold?",
+    "intent": "reservation"
+  },
+  {
+    "text": "How do I request a book that is checked out?",
+    "intent": "reservation"
+  },
+  {
+    "text": "I want to place a hold",
+    "intent": "reservation"
+  },
+  {
+    "text": "Can I reserve books online?",
+    "intent": "reservation"
+  },
+  {
+    "text": "How do I request a book?",
+    "intent": "reservation"
+  },
+  {
+    "text": "Will you notify me when my reserved book is ready?",
+    "intent": "reservation"
+  },
+  {
+    "text": "How long will you keep my reserved book?",
+    "intent": "reservation"
+  },
+  {
+    "text": "How do I cancel a reservation?",
+    "intent": "reservation"
+  },
+  {
+    "text": "Reserve a book",
+    "intent": "reservation"
+  },
+  {
+    "text": "Is there a late fee?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "How much is the overdue fine?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "What happens if my book is overdue?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Do you charge fines for overdue books?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "I forgot to return my book, will I be fined?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "What are the penalties for late returns?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Are there overdue charges?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Will I be charged if I return a book late?",
+    "intent": "late_fee"
+  },
+  {
+    "text": "I have an overdue book",
+    "intent": "late_fee"
+  },
+  {
+    "text": "late fee",
+    "intent": "late_fee"
+  },
+  {
+    "text": "Do you have ebooks?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Can I borrow ebooks?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Are digital books available?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Where can I find digital books?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Can I read books on my tablet?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Does the library offer audiobooks or ebooks?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "How do I access online books?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Do you lend e-books?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Are there online resources?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Can I download an e-book?",
+    "intent": "ebooks"
+  },
+  {
+    "text": "Do you have public computers?",
+    "intent": "computers"
+  },
+  {
+    "text": "Is there wifi?",
+    "intent": "computers"
+  },
+  {
+    "text": "What is the Wi-Fi password?",
+    "intent": "computers"
+  },
+  {
+    "text": "Can I print at the library?",
+    "intent": "computers"
+  },
+  {
+    "text": "Can I use the internet here?",
+    "intent": "computers"
+  },
+  {
+    "text": "Are there computers I can use?",
+    "intent": "computers"
+  },
+  {
+    "text": "Is Wi-Fi free for visitors?",
+    "intent": "computers"
+  },
+  {
+    "text": "Do I need a card to use the computers?",
+    "intent": "computers"
+  },
+  {
+    "text": "Can I connect my laptop to the Wi-Fi?",
+    "intent": "computers"
+  },
+  {
+    "text": "wifi",
+    "intent": "computers"
+  },
+  {
+    "text": "What is the address of the library?",
+    "intent": "location"
+  },
+  {
+    "text": "Where can I find you?",
+    "intent": "location"
+  },
+  {
+    "text": "How do I find the library?",
+    "intent": "location"
+  },
+  {
+    "text": "Where exactly is the library?",
+    "intent": "location"
+  },
+  {
+    "text": "Can you give me directions to the library?",
+    "intent": "location"
+  },
+  {
+    "text": "Which street is the library on?",
+    "intent": "location"
+  },
+  {
+    "text": "What is your location?",
+    "intent": "location"
+  },
+  {
+    "text": "Where is the library situated?",
+    "intent": "location"
+  },
+  {
+    "text": "Is the library in the city centre?",
+    "intent": "location"
+  },
+  {
+    "text": "address",
+    "intent": "location"
+  },
+  {
+    "text": "What is the phone number of the library?",
+    "intent": "contact"
+  },
+  {
+    "text": "Can I email the library?",
+    "intent": "contact"
+  },
+  {
+    "text": "How can I call you?",
+    "intent": "contact"
+  },
+  {
+    "text": "Who can I talk to?",
+    "intent": "contact"
+  },
+  {
+    "text": "How do I reach a librarian?",
+    "intent": "contact"
+  },
+  {
+    "text": "Can I speak to a librarian?",
+    "intent": "contact"
+  },
+  {
+    "text": "What is the library's contact information?",
+    "intent": "contact"
+  },
+  {
+    "text": "Is there an email address for questions?",
+    "intent": "contact"
+  },
+  {
+    "text": "Contact details",
+    "intent": "contact"
+  },
+  {
+    "text": "phone number",
+    "intent": "contact"
+  },
+  {
+    "text": "Do you have study rooms?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Can I book a room for group study?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Is there a quiet place to study?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Where are the study rooms?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "How do I book a study room?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Are there rooms for group projects?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Can I reserve a desk?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Do you have meeting rooms?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Is there a silent study area?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Are study rooms free to use?",
+    "intent": "study_rooms"
+  },
+  {
+    "text": "Hello",
+    "intent": "greeting"
+  },
+  {
+    "text": "Hi",
+    "intent": "greeting"
+  },
+  {
+    "text": "Hi there",
+    "intent": "greeting"
+  },
+  {
+    "text": "Hey",
+    "intent": "greeting"
+  },
+  {
+    "text": "Good morning",
+    "intent": "greeting"
+  },
+  {
+    "text": "Good afternoon",
+    "intent": "greeting"
+  },
+  {
+    "text": "Good evening",
+    "intent": "greeting"
+  },
+  {
+    "text": "Hello, I have a question",
+    "intent": "greeting"
+  },
+  {
+    "text": "Hey there",
+    "intent": "greeting"
+  },
+  {
+    "text": "Greetings",
+    "intent": "greeting"
+  },
+  {
+    "text": "Thanks",
+    "intent": "thanks"
+  },
+  {
+    "text": "Thank you",
+    "intent": "thanks"
+  },
+  {
+    "text": "Thank you very much",
+    "intent": "thanks"
+  },
+  {
+    "text": "Thanks a lot",
+    "intent": "thanks"
+  },
+  {
+    "text": "Many thanks",
+    "intent": "thanks"
+  },
+  {
+    "text": "Great, thanks",
+    "intent": "thanks"
+  },
+  {
+    "text": "That was helpful, thank you",
+    "intent": "thanks"
+  },
+  {
+    "text": "Thanks for your help",
+    "intent": "thanks"
+  },
+  {
+    "text": "Cheers",
+    "intent": "thanks"
+  },
+  {
+    "text": "Perfect, thanks",
+    "intent": "thanks"
+  }
+]
