@@ -1,0 +1,99 @@
+{
+  "source_url": "https://www.gutenberg.org/ebooks/55",
+  "download_url": "https://www.gutenberg.org/ebooks/55.txt.utf-8",
+  "downloaded": "2026-10-21",
+  "raw_sha256": "969bffab7740d4d8a0bac332d78bd0152ad4a40a2efc52f06c74a9bb6120be75",
+  "selected_sha256": "e3aba596d1daf09d75f5a6643a4e94864f2a3f4632b1bd7077f89d7a34998da5",
+  "counts": {
+    "validation": 8,
+    "test": 4
+  },
+  "data_path": "/Users/mindaugas/DATA/tnka-2026/l3-oz/oz12.jsonl",
+  "ids": [
+    {
+      "id": "OZ-01",
+      "chapter": 1,
+      "title": "The Cyclone",
+      "split": "validation",
+      "source_sha256": "4e0d34d62ba6dc510869b56b7ef7d24d50774b209b1a689354f875a0924b3fad"
+    },
+    {
+      "id": "OZ-02",
+      "chapter": 2,
+      "title": "The Council with the Munchkins",
+      "split": "validation",
+      "source_sha256": "2674840538f43728832523e1e723dd4339d5395293574ff0abf674be2556bea0"
+    },
+    {
+      "id": "OZ-03",
+      "chapter": 3,
+      "title": "How Dorothy Saved the Scarecrow",
+      "split": "validation",
+      "source_sha256": "4f24e1192280ed155bd38b266e35a69559e8eca5a292631b484272eb31497841"
+    },
+    {
+      "id": "OZ-04",
+      "chapter": 4,
+      "title": "The Road Through the Forest",
+      "split": "validation",
+      "source_sha256": "145c9e25f5c2649c6c08bea4ac4a038127e41186f474f0dfd333b34c49c65695"
+    },
+    {
+      "id": "OZ-05",
+      "chapter": 5,
+      "title": "The Rescue of the Tin Woodman",
+      "split": "validation",
+      "source_sha256": "8ac4b6b163a563552742eb7b2b86f0fd3c8b33879537c9cbb46f922ba3a6e089"
+    },
+    {
+      "id": "OZ-06",
+      "chapter": 6,
+      "title": "The Cowardly Lion",
+      "split": "validation",
+      "source_sha256": "c74d976879844bcbaf3639a418e86533b7ba2b99a802a8cc260792fc2bc193fe"
+    },
+    {
+      "id": "OZ-07",
+      "chapter": 7,
+      "title": "The Journey to the Great Oz",
+      "split": "validation",
+      "source_sha256": "20dc85543a44635e01b6e0b3969c8a0d914ce9018bd3b79b17f6d79a3eb14c0f"
+    },
+    {
+      "id": "OZ-08",
+      "chapter": 8,
+      "title": "The Deadly Poppy Field",
+      "split": "validation",
+      "source_sha256": "2d8c0feef0331a80d2203d2cca60f0a04a7614adbc692bca9ce768613d0147da"
+    },
+    {
+      "id": "OZ-09",
+      "chapter": 9,
+      "title": "The Queen of the Field Mice",
+      "split": "test",
+      "source_sha256": "6590c3d15ccea22f6a319b19bf1fe4d767c35da6b72b5980a54b6503724ec109"
+    },
+    {
+      "id": "OZ-10",
+      "chapter": 10,
+      "title": "The Guardian of the Gate",
+      "split": "test",
+      "source_sha256": "e68c4697efeffc34f8577261f0bbc8a9685521212cf588f4233b85ce1ad85261"
+    },
+    {
+      "id": "OZ-11",
+      "chapter": 11,
+      "title": "The Wonderful City of Oz",
+      "split": "test",
+      "source_sha256": "2393ddc469d649c2b4449f08799d940be08fb40a3235362099748ddd1237b382"
+    },
+    {
+      "id": "OZ-12",
+      "chapter": 12,
+      "title": "The Search for the Wicked Witch",
+      "split": "test",
+      "source_sha256": "b5dcb8dc683a3bf674f9cd6858d8eb28f9a15fefa5d3eb7c5565bbd3d93351b7"
+    }
+  ],
+  "note": "One selected excerpt per chapter; no model training;8 validation chapters and4 held-out chapters. Authored references describe selected excerpt only, not entire chapter."
+}

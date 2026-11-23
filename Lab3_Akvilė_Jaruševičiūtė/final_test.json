@@ -1,0 +1,87 @@
+{
+  "data_sha256": "e3aba596d1daf09d75f5a6643a4e94864f2a3f4632b1bd7077f89d7a34998da5",
+  "encoder_metadata": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license": "Apache-2.0",
+    "dimensions": 384,
+    "max_tokens": 256,
+    "pooling": "attention-mask mean then L2 normalize"
+  },
+  "encoder_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+  "encoder_truncated_sentences": 0,
+  "model_metadata": {
+    "model": "google-t5/t5-small",
+    "revision": "df1b051c49625cf57a3d0d8d3863ed4d13564fe4",
+    "license": "Apache-2.0"
+  },
+  "model_sha256": "bd944e5f1b3ad9b70dd9d00010a517059e19265671076b8b0a4a58d9491842bc",
+  "split": "test",
+  "ids": [
+    "OZ-09",
+    "OZ-10",
+    "OZ-11",
+    "OZ-12"
+  ],
+  "results": {
+    "lead2": {
+      "metrics": {
+        "rouge1": 0.30777071963999353,
+        "rouge2": 0.05225867723482344,
+        "rougeL": 0.18310733940434473
+      },
+      "runtime": {
+        "seconds": 0.0005599000141955912
+      },
+      "mean_words": 56.0
+    },
+    "embedding": {
+      "metrics": {
+        "rouge1": 0.2958096555188239,
+        "rouge2": 0.07751863291183794,
+        "rougeL": 0.17331125080477783
+      },
+      "runtime": {
+        "seconds": 2.1997435999801382
+      },
+      "mean_words": 59.5
+    },
+    "generative": {
+      "metrics": {
+        "rouge1": 0.2895702435726183,
+        "rouge2": 0.04852941176470588,
+        "rougeL": 0.1980738468642293
+      },
+      "runtime": {
+        "seconds": 4.230680599983316,
+        "truncated": 0,
+        "batch_size": 4,
+        "max_input_tokens": 512,
+        "max_new_tokens": 64,
+        "num_beams": 2,
+        "do_sample": false
+      },
+      "mean_words": 37.0
+    }
+  },
+  "outputs": {
+    "lead2": [
+      "“We cannot be far from the road of yellow brick, now,” remarked the Scarecrow, as he stood beside the girl, “for we have come nearly as far as the river carried us away.” The Tin Woodman was about to reply when he heard a low growl, and turning his head (which worked beautifully on hinges) he saw a strange beast come bounding over the grass toward them.",
+      "It was some time before the Cowardly Lion awakened, for he had lain among the poppies a long while, breathing in their deadly fragrance; but when he did open his eyes and roll off the truck he was very glad to find himself still alive. “I ran as fast as I could,” he said, sitting down and yawning, “but the flowers were too strong for me.",
+      "Even with eyes protected by the green spectacles, Dorothy and her friends were at first dazzled by the brilliancy of the wonderful City. The streets were lined with beautiful houses all built of green marble and studded everywhere with sparkling emeralds.",
+      "The soldier with the green whiskers led them through the streets of the Emerald City until they reached the room where the Guardian of the Gates lived. This officer unlocked their spectacles to put them back in his great box, and then he politely opened the gate for our friends."
+    ],
+    "embedding": [
+      "It was, indeed, a great yellow Wildcat, and the Woodman thought it must be chasing something, for its ears were lying close to its head and its mouth was wide open, showing two rows of ugly teeth, while its red eyes glowed like balls of fire. As it came nearer the Tin Woodman saw that running before the beast was a little gray field mouse, and although he had no heart he knew it was wrong for the Wildcat to try to kill such a pretty, harmless creature.",
+      "“I ran as fast as I could,” he said, sitting down and yawning, “but the flowers were too strong for me. Then they told him of the field mice, and how they had generously saved him from death; and the Cowardly Lion laughed, and said: “I have always thought myself very big and terrible; yet such little things as flowers came near to killing me, and such small animals as mice have saved my life.",
+      "Many shops stood in the street, and Dorothy saw that everything in them was green. At one place a man was selling green lemonade, and when the children bought it Dorothy could see that they paid for it with green pennies.",
+      "“Perhaps not,” said the Scarecrow, “for we mean to destroy her.” “No one has ever destroyed her before, so I naturally thought she would make slaves of you, as she has of the rest."
+    ],
+    "generative": [
+      "the Tin Woodman saw a strange beast come bounding over the grass toward them. it was a great yellow Wildcat, and the Woodman thought it must be chasing something. the woodman raised his axe, and as the beast ran by he gave it a quick blow ",
+      "the Cowardly Lion was a comrade, but he was still alive. the cowardly Lion laughed, and said: \"i have always thought myself very big and terrible\"",
+      "the streets were lined with beautiful houses all built of green marble. they walked over a pavement of the same green marble. the windows were of green glass; even the sky above the city had a green tint.",
+      "the soldier with the green whiskers led them through the streets of the Emerald City. the soldier with the green whiskers led them through the streets until they reached the room where the Guardian of the Gates lived."
+    ]
+  }
+}

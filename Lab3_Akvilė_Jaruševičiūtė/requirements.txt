@@ -1,0 +1,5 @@
+transformers==4.44.2
+sentencepiece==0.2.0
+safetensors==0.4.5
+rouge-score==0.1.2
+# Also required: numpy, scikit-learn, torch; use the institution's approved environment.

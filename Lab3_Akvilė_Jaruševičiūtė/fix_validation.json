@@ -1,0 +1,40 @@
+{
+  "baseline": {
+    "metrics": {
+      "rouge1": 0.3411,
+      "rouge2": 0.1083,
+      "rougeL": 0.2416
+    },
+    "mean_words": 53.625,
+    "seconds": 2.676334499963559,
+    "outputs": {
+      "OZ-01": "Uncle Henry and Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar—except a small hole dug in the ground, called a cyclone cellar, where the family could go in case one of those great whirlwinds arose, mighty enough to crush any building in its path.",
+      "OZ-02": "Dorothy sat up and noticed that the house was not moving; nor was it dark, for the bright sunshine came in at the window, flooding the little room. A little way off was a small brook, rushing and sparkling along between green banks, and murmuring in a voice very grateful to a little girl who had lived so long on the dry, gray prairies.",
+      "OZ-03": "“My name is Dorothy,” said the girl, “and I am going to the Emerald City, to ask the Great Oz to send me back to Kansas.” “Do you think,” he asked, “if I go to the Emerald City with you, that Oz would give me some brains?”",
+      "OZ-04": "Sometimes, indeed, they were broken or missing altogether, leaving holes that Toto jumped across and Dorothy walked around. As for the Scarecrow, having no brains, he walked straight ahead, and so stepped into the holes and fell at full length on the hard bricks.",
+      "OZ-05": "“We must go and search for water,” she said to him. She saw there was not much bread left in the basket, and the girl was thankful the Scarecrow did not have to eat anything, for there was scarcely enough for herself and Toto for the day.",
+      "OZ-06": "All this time Dorothy and her companions had been walking through the thick woods. But now and then there came a deep growl from some wild animal hidden among the trees.",
+      "OZ-07": "The tree made a good, thick covering to protect them from the dew, and the Tin Woodman chopped a great pile of wood with his axe and Dorothy built a splendid fire that warmed her and made her feel less lonely. “I should certainly weep if you killed a poor deer, and then my jaws would rust again.”",
+      "OZ-08": "But the raft was nearly done, and after the Tin Woodman had cut a few more logs and fastened them together with wooden pins, they were ready to start. When the Cowardly Lion stepped upon the raft it tipped badly, for he was big and heavy; but the Scarecrow and the Tin Woodman stood upon the other end to steady it, and they had long poles in their hands to push the raft through the water."
+    }
+  },
+  "mmr": {
+    "metrics": {
+      "rouge1": 0.3427,
+      "rouge2": 0.1146,
+      "rougeL": 0.2452
+    },
+    "mean_words": 52.625,
+    "seconds": 0.8528734999708831,
+    "outputs": {
+      "OZ-01": "Uncle Henry and Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar—except a small hole dug in the ground, called a cyclone cellar, where the family could go in case one of those great whirlwinds arose, mighty enough to crush any building in its path.",
+      "OZ-02": "Dorothy sat up and noticed that the house was not moving; nor was it dark, for the bright sunshine came in at the window, flooding the little room. A little way off was a small brook, rushing and sparkling along between green banks, and murmuring in a voice very grateful to a little girl who had lived so long on the dry, gray prairies.",
+      "OZ-03": "“Can’t you get down?” asked Dorothy. “Do you think,” he asked, “if I go to the Emerald City with you, that Oz would give me some brains?”",
+      "OZ-04": "As for the Scarecrow, having no brains, he walked straight ahead, and so stepped into the holes and fell at full length on the hard bricks. At noon they sat down by the roadside, near a little brook, and Dorothy opened her basket and got out some bread.",
+      "OZ-05": "“We must go and search for water,” she said to him. She saw there was not much bread left in the basket, and the girl was thankful the Scarecrow did not have to eat anything, for there was scarcely enough for herself and Toto for the day.",
+      "OZ-06": "All this time Dorothy and her companions had been walking through the thick woods. “How long will it be,” the child asked of the Tin Woodman, “before we are out of the forest?”",
+      "OZ-07": "The tree made a good, thick covering to protect them from the dew, and the Tin Woodman chopped a great pile of wood with his axe and Dorothy built a splendid fire that warmed her and made her feel less lonely. “I should certainly weep if you killed a poor deer, and then my jaws would rust again.”",
+      "OZ-08": "Behind them was the dark forest they had passed safely through, although they had suffered many discouragements; but before them was a lovely, sunny country that seemed to beckon them on to the Emerald City. When the Cowardly Lion stepped upon the raft it tipped badly, for he was big and heavy; but the Scarecrow and the Tin Woodman stood upon the other end to steady it, and they had long poles in their hands to push the raft through the water."
+    }
+  }
+}

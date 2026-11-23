@@ -1,0 +1,25 @@
+{
+  "id": "OZ-02",
+  "intro": "It was a quiet day, and the sky above the road was pale and clear.",
+  "gen": {
+    "seconds": 2.3967373999767005,
+    "truncated": 0,
+    "batch_size": 4,
+    "max_input_tokens": 512,
+    "max_new_tokens": 64,
+    "num_beams": 2,
+    "do_sample": false
+  },
+  "outputs": {
+    "original": {
+      "lead2": "She was awakened by a shock, so sudden and severe that if Dorothy had not been lying on the soft bed she might have been hurt. As it was, the jar made her catch her breath and wonder what had happened; and Toto put his cold little nose into her face and whined dismally.",
+      "embedding": "Dorothy sat up and noticed that the house was not moving; nor was it dark, for the bright sunshine came in at the window, flooding the little room. A little way off was a small brook, rushing and sparkling along between green banks, and murmuring in a voice very grateful to a little girl who had lived so long on the dry, gray prairies.",
+      "generative": "the cyclone had set the house down very gently in the midst of a country of marvelous beauty. there were lovely patches of greensward all about, with stately trees bearing rich and luscious fruits."
+    },
+    "with_intro": {
+      "lead2": "It was a quiet day, and the sky above the road was pale and clear. She was awakened by a shock, so sudden and severe that if Dorothy had not been lying on the soft bed she might have been hurt.",
+      "embedding": "Dorothy sat up and noticed that the house was not moving; nor was it dark, for the bright sunshine came in at the window, flooding the little room. A little way off was a small brook, rushing and sparkling along between green banks, and murmuring in a voice very grateful to a little girl who had lived so long on the dry, gray prairies.",
+      "generative": "the cyclone had set the house down very gently in the midst of a country of marvelous beauty. there were lovely patches of greensward all about, with stately trees bearing rich and luscious fruits."
+    }
+  }
+}

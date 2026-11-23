@@ -1,0 +1,103 @@
+{
+  "data_sha256": "e3aba596d1daf09d75f5a6643a4e94864f2a3f4632b1bd7077f89d7a34998da5",
+  "encoder_metadata": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license": "Apache-2.0",
+    "dimensions": 384,
+    "max_tokens": 256,
+    "pooling": "attention-mask mean then L2 normalize"
+  },
+  "encoder_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+  "encoder_truncated_sentences": 0,
+  "model_metadata": {
+    "model": "google-t5/t5-small",
+    "revision": "df1b051c49625cf57a3d0d8d3863ed4d13564fe4",
+    "license": "Apache-2.0"
+  },
+  "model_sha256": "bd944e5f1b3ad9b70dd9d00010a517059e19265671076b8b0a4a58d9491842bc",
+  "split": "validation",
+  "ids": [
+    "OZ-01",
+    "OZ-02",
+    "OZ-03",
+    "OZ-04",
+    "OZ-05",
+    "OZ-06",
+    "OZ-07",
+    "OZ-08"
+  ],
+  "results": {
+    "lead2": {
+      "metrics": {
+        "rouge1": 0.2983969965414068,
+        "rouge2": 0.057269194998579555,
+        "rougeL": 0.19335589513934126
+      },
+      "runtime": {
+        "seconds": 0.0006549999816343188
+      },
+      "mean_words": 47.125
+    },
+    "embedding": {
+      "metrics": {
+        "rouge1": 0.3411355017935938,
+        "rouge2": 0.10829353824656442,
+        "rougeL": 0.24163810091116175
+      },
+      "runtime": {
+        "seconds": 2.6638434999622405
+      },
+      "mean_words": 53.625
+    },
+    "generative": {
+      "metrics": {
+        "rouge1": 0.30370114431540407,
+        "rouge2": 0.05950366424859489,
+        "rougeL": 0.19313707717706396
+      },
+      "runtime": {
+        "seconds": 9.207237800001167,
+        "truncated": 0,
+        "batch_size": 4,
+        "max_input_tokens": 512,
+        "max_new_tokens": 64,
+        "num_beams": 2,
+        "do_sample": false
+      },
+      "mean_words": 39.5
+    }
+  },
+  "outputs": {
+    "lead2": [
+      "Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer’s wife. Their house was small, for the lumber to build it had to be carried by wagon many miles.",
+      "She was awakened by a shock, so sudden and severe that if Dorothy had not been lying on the soft bed she might have been hurt. As it was, the jar made her catch her breath and wonder what had happened; and Toto put his cold little nose into her face and whined dismally.",
+      "“I’m not feeling well,” said the Scarecrow, with a smile, “for it is very tedious being perched up here night and day to scare away crows.” “Can’t you get down?” asked Dorothy.",
+      "After a few hours the road began to be rough, and the walking grew so difficult that the Scarecrow often stumbled over the yellow bricks, which were here very uneven. Sometimes, indeed, they were broken or missing altogether, leaving holes that Toto jumped across and Dorothy walked around.",
+      "When Dorothy awoke the sun was shining through the trees and Toto had long been out chasing birds around him and squirrels. She sat up and looked around her.",
+      "All this time Dorothy and her companions had been walking through the thick woods. The road was still paved with yellow brick, but these were much covered by dried branches and dead leaves from the trees, and the walking was not at all good.",
+      "They were obliged to camp out that night under a large tree in the forest, for there were no houses near. The tree made a good, thick covering to protect them from the dew, and the Tin Woodman chopped a great pile of wood with his axe and Dorothy built a splendid fire that warmed her and made her feel less lonely.",
+      "Our little party of travelers awakened the next morning refreshed and full of hope, and Dorothy breakfasted like a princess off peaches and plums from the trees beside the river. Behind them was the dark forest they had passed safely through, although they had suffered many discouragements; but before them was a lovely, sunny country that seemed to beckon them on to the Emerald City."
+    ],
+    "embedding": [
+      "Uncle Henry and Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar—except a small hole dug in the ground, called a cyclone cellar, where the family could go in case one of those great whirlwinds arose, mighty enough to crush any building in its path.",
+      "Dorothy sat up and noticed that the house was not moving; nor was it dark, for the bright sunshine came in at the window, flooding the little room. A little way off was a small brook, rushing and sparkling along between green banks, and murmuring in a voice very grateful to a little girl who had lived so long on the dry, gray prairies.",
+      "“My name is Dorothy,” said the girl, “and I am going to the Emerald City, to ask the Great Oz to send me back to Kansas.” “Do you think,” he asked, “if I go to the Emerald City with you, that Oz would give me some brains?”",
+      "Sometimes, indeed, they were broken or missing altogether, leaving holes that Toto jumped across and Dorothy walked around. As for the Scarecrow, having no brains, he walked straight ahead, and so stepped into the holes and fell at full length on the hard bricks.",
+      "“We must go and search for water,” she said to him. She saw there was not much bread left in the basket, and the girl was thankful the Scarecrow did not have to eat anything, for there was scarcely enough for herself and Toto for the day.",
+      "All this time Dorothy and her companions had been walking through the thick woods. But now and then there came a deep growl from some wild animal hidden among the trees.",
+      "The tree made a good, thick covering to protect them from the dew, and the Tin Woodman chopped a great pile of wood with his axe and Dorothy built a splendid fire that warmed her and made her feel less lonely. “I should certainly weep if you killed a poor deer, and then my jaws would rust again.”",
+      "But the raft was nearly done, and after the Tin Woodman had cut a few more logs and fastened them together with wooden pins, they were ready to start. When the Cowardly Lion stepped upon the raft it tipped badly, for he was big and heavy; but the Scarecrow and the Tin Woodman stood upon the other end to steady it, and they had long poles in their hands to push the raft through the water."
+    ],
+    "generative": [
+      "a small hole dug in the ground, called a cyclone cellar, was reached by a trap door in the middle of the floor, from which a ladder led down into the small, dark hole. there was no garret at all, and no cellar, except a small",
+      "the cyclone had set the house down very gently in the midst of a country of marvelous beauty. there were lovely patches of greensward all about, with stately trees bearing rich and luscious fruits.",
+      "the Scarecrow was set down on the ground and stuffed with straw. the figure was lifted off the pole, for being stuffed with straw. the scarecrow said he feels like a new man.",
+      "the scarecrow often stumbled over the yellow bricks, which were uneven. they were broken or missing altogether, leaving holes that were broken or missing altogether. the scarecrow walked straight ahead, and so stepped into the holes and fell at full length on the hard bricks ",
+      "the Scarecrow drank and bathed and ate her breakfast. she saw there was not much bread left in the basket. the girl was thankful the Scarecrow did not have to eat anything.",
+      "the road was still paved with yellow brick, but these were much covered by dried branches and dead leaves from the trees. there was a deep growl from some wild animal hidden among the trees. toto knew, and walked close to Dorothy’s side, and did not even bark in return",
+      "the tree made a good, thick covering to protect them from the dew. the Tin Woodman chopped a great pile of wood with his axe. Dorothy built a splendid fire that warmed her and made her feel less lonely.",
+      "the raft was nearly done, and the Tin Woodman had cut a few logs. the raft was fastened together with wooden pins. Dorothy sat down in the middle of the raft and held toto in her arms."
+    ]
+  }
+}
