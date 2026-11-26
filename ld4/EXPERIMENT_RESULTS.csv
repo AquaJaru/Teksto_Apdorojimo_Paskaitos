@@ -1,0 +1,11 @@
+split,condition,n_questions,n_answerable,n_unanswerable,retrieval_correct,retrieval_total,em_correct,em_total,abstention_correct,abstention_total,unsupported_count,unsupported_total,incomplete_count,incomplete_total,notes
+validation,no_source,200,158,42,netaikoma,netaikoma,2,158,34,42,8,42,0,200,GPT without any card: guesses train priors (month 6) or unknown
+validation,correct_card,200,158,42,netaikoma,netaikoma,140,158,42,42,0,42,0,200,"oracle card by document_id; errors are pure GPT errors (multi-digit references, month)"
+validation,retrieved_card,200,158,42,188,200,138,158,39,42,3,42,0,200,LSA top-1 card; all retrieval misses are exact duplicate titles (score 1.0 ties)
+validation,training_majority,200,158,42,netaikoma,netaikoma,48,158,8,42,34,42,0,200,"most frequent TRAIN answer per field (year 2023, references 0, month unknown ...)"
+validation,field_reading_rule,200,158,42,netaikoma,netaikoma,158,158,42,42,0,42,0,200,"regex field : value ; on the correct card, else unknown; no learning"
+test,no_source,100,75,25,netaikoma,netaikoma,1,75,18,25,7,25,0,100,GPT without any card: guesses train priors (month 6) or unknown
+test,correct_card,100,75,25,netaikoma,netaikoma,70,75,25,25,0,25,0,100,"oracle card by document_id; errors are pure GPT errors (multi-digit references, month)"
+test,retrieved_card,100,75,25,96,100,69,75,25,25,0,25,0,100,LSA top-1 card; all retrieval misses are exact duplicate titles (score 1.0 ties)
+test,training_majority,100,75,25,netaikoma,netaikoma,32,75,7,25,18,25,0,100,"most frequent TRAIN answer per field (year 2023, references 0, month unknown ...)"
+test,field_reading_rule,100,75,25,netaikoma,netaikoma,75,75,25,25,0,25,0,100,"regex field : value ; on the correct card, else unknown; no learning"

@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.pt
+outputs/repair_aug_s42/aug_data/
+.ipynb_checkpoints/

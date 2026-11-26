@@ -1,0 +1,7 @@
+Užrašyta 2026-11-25 prieš pataisymo bandymą (bazinis validavimas jau išmatuotas, testas NEPALIESTAS).
+Trūkumas: su TEISINGA kortele GPT blogai kopijuoja kelių skaitmenų skaičius (references 12/24, month 14/21);
+mokymo nuostolis ~0,000, validavimo ~0,37 -> modelis įsimena laukų vietas, o ne skaito pagal lauko pavadinimą.
+Pakeitimas (tik vienas): mokymo kortelėms pridedamos 2 papildomos kopijos su sumaišyta laukų tvarka, visa kita tas pats.
+Prognozė: correct_card atsakomų EM 84,2 % -> ~88–90 %; daugiausia pagerės references ir month; teisingas unknown liks ~100 %;
+paieškos top-1 nepasikeis (94,0 %), nes paieška nekeičiama. Rizika: rezultatas gali nepasikeisti arba pablogėti, nes per tą patį
+žingsnių skaičių kiekviena originali kortelė matoma rečiau. Triukšmo patikra: bazinis modelis su seed 7.

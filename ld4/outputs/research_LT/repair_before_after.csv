@@ -1,0 +1,10 @@
+run,condition,em,abstention,unsupported,incomplete,em_authors,em_license_reported,em_month,em_references,em_type,em_year
+baseline_seed42,correct_card,140/158,42/42,0/42,0/200,31/32,27/27,16/21,13/24,24/24,29/30
+baseline_seed42,retrieved_card,138/158,39/42,3/42,0/200,31/32,26/27,16/21,13/24,24/24,28/30
+baseline_seed42,no_source,2/158,34/42,8/42,0/200,0/32,0/27,2/21,0/24,0/24,0/30
+baseline_seed7 (noise check),correct_card,141/158,41/42,1/42,0/200,30/32,27/27,16/21,16/24,24/24,28/30
+baseline_seed7 (noise check),retrieved_card,139/158,38/42,4/42,0/200,30/32,26/27,16/21,16/24,24/24,27/30
+baseline_seed7 (noise check),no_source,0/158,35/42,7/42,0/200,0/32,0/27,0/21,0/24,0/24,0/30
+repair_field_shuffle_seed42,correct_card,98/158,42/42,0/42,0/200,17/32,27/27,7/21,5/24,24/24,18/30
+repair_field_shuffle_seed42,retrieved_card,99/158,39/42,3/42,0/200,18/32,26/27,7/21,6/24,24/24,18/30
+repair_field_shuffle_seed42,no_source,15/158,23/42,19/42,0/200,15/32,0/27,0/21,0/24,0/24,0/30

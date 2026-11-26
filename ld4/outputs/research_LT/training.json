@@ -1,0 +1,29 @@
+{
+  "config": {
+    "dim": 96,
+    "heads": 4,
+    "blocks": 2,
+    "context": 128,
+    "batch": 32,
+    "lr": 0.002,
+    "seed": 42
+  },
+  "parameters": 338450,
+  "vocab": 914,
+  "train_rows": 2100,
+  "validation_rows": 200,
+  "steps": 10000,
+  "wall_seconds": 506.531981099979,
+  "warm_s_per_step": 0.05009705799864605,
+  "training_device": "cpu",
+  "threads": 1,
+  "best_validation_em": 0.91,
+  "data_sha256": {
+    "documents.jsonl": "9e08a3b0cd39d08af131f6049d5592090198a13406ce2e41e6611ba4fb659099",
+    "test.jsonl": "697a9b322a624ca26029f44596ec5c2be76c776c29b2a68d0fbffcacd033451a",
+    "train.jsonl": "0468211cc832d38285819b1bd0212a2311ab118b616b58fc80444dbd36ead9c9",
+    "validation.jsonl": "f07970c8ec917bd1232c77e140a3c0655cd347d3d3e21da063fb61170abeba92"
+  },
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "torch": "2.15.0+cpu"
+}

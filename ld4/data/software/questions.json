@@ -1,0 +1,26 @@
+{
+  "module": [
+    "Which module is listed?",
+    "Kuris modulis nurodytas?"
+  ],
+  "kind": [
+    "What API kind is listed?",
+    "Koks API tipas nurodytas?"
+  ],
+  "async": [
+    "Is asynchronous API status listed as yes or no?",
+    "Ar nurodytas asinchroninis API?"
+  ],
+  "required": [
+    "How many required positional parameters are listed?",
+    "Kiek nurodyta privalomų pozicinių parametrų?"
+  ],
+  "keyword_only": [
+    "How many keyword-only parameters are listed?",
+    "Kiek nurodyta tik vardinių parametrų?"
+  ],
+  "variadic": [
+    "Is variadic argument support listed as yes or no?",
+    "Ar nurodytas kintamas argumentų skaičius?"
+  ]
+}

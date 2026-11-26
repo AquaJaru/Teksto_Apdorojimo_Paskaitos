@@ -1,0 +1,1 @@
+SETTINGS FROZEN: outputs/research_LT/best.pt (dim96 heads4 blocks2 lr0.002 seed42, no augmentation, full query). Test run once.

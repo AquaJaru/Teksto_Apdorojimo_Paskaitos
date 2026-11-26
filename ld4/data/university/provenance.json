@@ -1,0 +1,16 @@
+{
+  "topic": "university",
+  "documents": 500,
+  "counts": {
+    "train": 2100,
+    "validation": 200,
+    "test": 100
+  },
+  "date": "2026-11-20",
+  "source": "MIT OCW official API",
+  "scope": "Curated short metadata QA. Not general coding/study/scientific-methods advice. One/two metadata fields intentionally omitted per record; unknown means absent from this supplied metadata view. Original URLs can contain additional information.",
+  "license": [
+    "CC-BY-NC-SA-4.0"
+  ],
+  "cross_split_identical_contexts": 0
+}

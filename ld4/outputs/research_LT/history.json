@@ -1,0 +1,322 @@
+[
+  {
+    "step": 500,
+    "seconds": 25.777209199965,
+    "train_loss": 0.20077531039714813,
+    "validation_loss": 0.5687969326972961,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.595,
+      "answerable_em": 0.5379746835443038,
+      "unanswerable_em": 0.8095238095238095,
+      "false_abstention": 0.05063291139240506,
+      "unsupported": 0.19047619047619047
+    }
+  },
+  {
+    "step": 1000,
+    "seconds": 51.819206699961796,
+    "train_loss": 0.03491208702325821,
+    "validation_loss": 0.5817182660102844,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.745,
+      "answerable_em": 0.689873417721519,
+      "unanswerable_em": 0.9523809523809523,
+      "false_abstention": 0.0379746835443038,
+      "unsupported": 0.047619047619047616
+    }
+  },
+  {
+    "step": 1500,
+    "seconds": 77.31676139996853,
+    "train_loss": 0.024777576327323914,
+    "validation_loss": 0.5371955037117004,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.765,
+      "answerable_em": 0.7215189873417721,
+      "unanswerable_em": 0.9285714285714286,
+      "false_abstention": 0.006329113924050633,
+      "unsupported": 0.07142857142857142
+    }
+  },
+  {
+    "step": 2000,
+    "seconds": 103.16002509999089,
+    "train_loss": 0.004563177470117807,
+    "validation_loss": 0.6655959486961365,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.785,
+      "answerable_em": 0.740506329113924,
+      "unanswerable_em": 0.9523809523809523,
+      "false_abstention": 0.012658227848101266,
+      "unsupported": 0.047619047619047616
+    }
+  },
+  {
+    "step": 2500,
+    "seconds": 127.53658219997305,
+    "train_loss": 0.004568312782794237,
+    "validation_loss": 0.694926917552948,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.78,
+      "answerable_em": 0.7341772151898734,
+      "unanswerable_em": 0.9523809523809523,
+      "false_abstention": 0.0189873417721519,
+      "unsupported": 0.047619047619047616
+    }
+  },
+  {
+    "step": 3000,
+    "seconds": 152.04742109996732,
+    "train_loss": 0.0006362379644997418,
+    "validation_loss": 0.7586567401885986,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.76,
+      "answerable_em": 0.7025316455696202,
+      "unanswerable_em": 0.9761904761904762,
+      "false_abstention": 0.08227848101265822,
+      "unsupported": 0.023809523809523808
+    }
+  },
+  {
+    "step": 3500,
+    "seconds": 176.97797469992656,
+    "train_loss": 0.0005774986348114908,
+    "validation_loss": 0.557537317276001,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.835,
+      "answerable_em": 0.7974683544303798,
+      "unanswerable_em": 0.9761904761904762,
+      "false_abstention": 0.006329113924050633,
+      "unsupported": 0.023809523809523808
+    }
+  },
+  {
+    "step": 4000,
+    "seconds": 201.6538053000113,
+    "train_loss": 0.006583170499652624,
+    "validation_loss": 0.4648286998271942,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.82,
+      "answerable_em": 0.7911392405063291,
+      "unanswerable_em": 0.9285714285714286,
+      "false_abstention": 0.012658227848101266,
+      "unsupported": 0.07142857142857142
+    }
+  },
+  {
+    "step": 4500,
+    "seconds": 226.79952219990082,
+    "train_loss": 0.0011242980835959315,
+    "validation_loss": 0.46019455790519714,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.835,
+      "answerable_em": 0.7974683544303798,
+      "unanswerable_em": 0.9761904761904762,
+      "false_abstention": 0.0,
+      "unsupported": 0.023809523809523808
+    }
+  },
+  {
+    "step": 5000,
+    "seconds": 251.35848619998433,
+    "train_loss": 0.09038137644529343,
+    "validation_loss": 0.38363325595855713,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.84,
+      "answerable_em": 0.810126582278481,
+      "unanswerable_em": 0.9523809523809523,
+      "false_abstention": 0.012658227848101266,
+      "unsupported": 0.047619047619047616
+    }
+  },
+  {
+    "step": 5500,
+    "seconds": 276.4506307999836,
+    "train_loss": 0.00026710203383117914,
+    "validation_loss": 0.39063090085983276,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.865,
+      "answerable_em": 0.8291139240506329,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.006329113924050633,
+      "unsupported": 0.0
+    }
+  },
+  {
+    "step": 6000,
+    "seconds": 301.450656699948,
+    "train_loss": 0.00043516926234588027,
+    "validation_loss": 0.29826539754867554,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.88,
+      "answerable_em": 0.8544303797468354,
+      "unanswerable_em": 0.9761904761904762,
+      "false_abstention": 0.0,
+      "unsupported": 0.023809523809523808
+    }
+  },
+  {
+    "step": 6500,
+    "seconds": 325.76322389999405,
+    "train_loss": 5.054342545918189e-05,
+    "validation_loss": 0.2961285412311554,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.895,
+      "answerable_em": 0.8670886075949367,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.0,
+      "unsupported": 0.0
+    }
+  },
+  {
+    "step": 7000,
+    "seconds": 350.51891449990217,
+    "train_loss": 5.434393460745923e-05,
+    "validation_loss": 0.2993601858615875,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.895,
+      "answerable_em": 0.8670886075949367,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.0,
+      "unsupported": 0.0
+    }
+  },
+  {
+    "step": 7500,
+    "seconds": 375.1097676999634,
+    "train_loss": 6.914370169397444e-05,
+    "validation_loss": 0.30426737666130066,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.895,
+      "answerable_em": 0.8670886075949367,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.0,
+      "unsupported": 0.0
+    }
+  },
+  {
+    "step": 8000,
+    "seconds": 399.862967699999,
+    "train_loss": 1.735292244120501e-05,
+    "validation_loss": 0.3071712255477905,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.9,
+      "answerable_em": 0.8734177215189873,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.0,
+      "unsupported": 0.0
+    }
+  },
+  {
+    "step": 8500,
+    "seconds": 433.1877082999563,
+    "train_loss": 2.002671863010619e-05,
+    "validation_loss": 0.31152090430259705,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.905,
+      "answerable_em": 0.879746835443038,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.0,
+      "unsupported": 0.0
+    }
+  },
+  {
+    "step": 9000,
+    "seconds": 458.1526384999743,
+    "train_loss": 1.5475618056370877e-05,
+    "validation_loss": 0.31573915481567383,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.905,
+      "answerable_em": 0.879746835443038,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.0,
+      "unsupported": 0.0
+    }
+  },
+  {
+    "step": 9500,
+    "seconds": 482.5306815999793,
+    "train_loss": 1.778056684997864e-05,
+    "validation_loss": 0.3195720314979553,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.91,
+      "answerable_em": 0.8860759493670886,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.0,
+      "unsupported": 0.0
+    }
+  },
+  {
+    "step": 10000,
+    "seconds": 506.52984909992665,
+    "train_loss": 1.2829314982809592e-05,
+    "validation_loss": 0.3258885443210602,
+    "validation": {
+      "n": 200,
+      "answerable": 158,
+      "unanswerable": 42,
+      "em": 0.91,
+      "answerable_em": 0.8860759493670886,
+      "unanswerable_em": 1.0,
+      "false_abstention": 0.0,
+      "unsupported": 0.0
+    }
+  }
+]

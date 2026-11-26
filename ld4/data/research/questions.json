@@ -1,0 +1,26 @@
+{
+  "year": [
+    "Which publication year is listed?",
+    "Kurie publikacijos metai nurodyti?"
+  ],
+  "month": [
+    "Which publication month is listed?",
+    "Kuris publikavimo mėnuo nurodytas?"
+  ],
+  "authors": [
+    "How many authors are listed?",
+    "Kiek autorių nurodyta?"
+  ],
+  "references": [
+    "How many references are reported?",
+    "Kiek literatūros nuorodų nurodyta?"
+  ],
+  "type": [
+    "Which publication type is listed?",
+    "Koks publikacijos tipas nurodytas?"
+  ],
+  "license_reported": [
+    "Is a license reported in the metadata?",
+    "Ar metaduomenyse nurodyta licencija?"
+  ]
+}

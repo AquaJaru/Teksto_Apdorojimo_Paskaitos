@@ -1,0 +1,26 @@
+{
+  "year": [
+    "Which course year is listed?",
+    "Kurie kurso metai nurodyti?"
+  ],
+  "semester": [
+    "Which semester is listed?",
+    "Kuris semestras nurodytas?"
+  ],
+  "level": [
+    "Which course level is listed?",
+    "Kuris kurso lygis nurodytas?"
+  ],
+  "instructors": [
+    "How many instructors are listed?",
+    "Kiek dėstytojų nurodyta?"
+  ],
+  "materials": [
+    "How many material types are listed?",
+    "Kiek medžiagos tipų nurodyta?"
+  ],
+  "topics": [
+    "How many course topics are listed?",
+    "Kiek kurso temų nurodyta?"
+  ]
+}

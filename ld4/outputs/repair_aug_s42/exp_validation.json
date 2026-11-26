@@ -1,0 +1,270 @@
+{
+  "split": "validation",
+  "checkpoint": "outputs/repair_aug_s42/best.pt",
+  "query_mode": "full",
+  "seconds": 1.8,
+  "majority": {
+    "references": "0",
+    "license_reported": "no",
+    "type": "book-chapter",
+    "year": "2023",
+    "authors": "1",
+    "month": "unknown"
+  },
+  "results": {
+    "no_source": {
+      "n_questions": 200,
+      "n_answerable": 158,
+      "n_unanswerable": 42,
+      "em_correct": 17,
+      "em_total": 158,
+      "abstention_correct": 30,
+      "abstention_total": 42,
+      "unsupported_count": 12,
+      "unsupported_total": 42,
+      "incomplete_count": 0,
+      "incomplete_total": 200,
+      "wrong_answer_on_answerable": 36,
+      "false_unknown_on_answerable": 105,
+      "per_field": {
+        "authors": {
+          "answerable": "15/32",
+          "unanswerable": "0/4"
+        },
+        "license_reported": {
+          "answerable": "0/27",
+          "unanswerable": "14/14"
+        },
+        "month": {
+          "answerable": "2/21",
+          "unanswerable": "0/8"
+        },
+        "references": {
+          "answerable": "0/24",
+          "unanswerable": "7/7"
+        },
+        "type": {
+          "answerable": "0/24",
+          "unanswerable": "5/5"
+        },
+        "year": {
+          "answerable": "0/30",
+          "unanswerable": "4/4"
+        }
+      }
+    },
+    "correct_card": {
+      "n_questions": 200,
+      "n_answerable": 158,
+      "n_unanswerable": 42,
+      "em_correct": 103,
+      "em_total": 158,
+      "abstention_correct": 41,
+      "abstention_total": 42,
+      "unsupported_count": 1,
+      "unsupported_total": 42,
+      "incomplete_count": 0,
+      "incomplete_total": 200,
+      "wrong_answer_on_answerable": 53,
+      "false_unknown_on_answerable": 2,
+      "per_field": {
+        "authors": {
+          "answerable": "20/32",
+          "unanswerable": "4/4"
+        },
+        "license_reported": {
+          "answerable": "27/27",
+          "unanswerable": "14/14"
+        },
+        "month": {
+          "answerable": "8/21",
+          "unanswerable": "8/8"
+        },
+        "references": {
+          "answerable": "8/24",
+          "unanswerable": "7/7"
+        },
+        "type": {
+          "answerable": "23/24",
+          "unanswerable": "5/5"
+        },
+        "year": {
+          "answerable": "17/30",
+          "unanswerable": "3/4"
+        }
+      }
+    },
+    "retrieved_card": {
+      "n_questions": 200,
+      "n_answerable": 158,
+      "n_unanswerable": 42,
+      "em_correct": 102,
+      "em_total": 158,
+      "abstention_correct": 38,
+      "abstention_total": 42,
+      "unsupported_count": 4,
+      "unsupported_total": 42,
+      "incomplete_count": 0,
+      "incomplete_total": 200,
+      "wrong_answer_on_answerable": 53,
+      "false_unknown_on_answerable": 3,
+      "retrieval_correct": 188,
+      "retrieval_total": 200,
+      "answerable_errors_wrong_card": 2,
+      "answerable_errors_right_card": 54,
+      "per_field": {
+        "authors": {
+          "answerable": "20/32",
+          "unanswerable": "3/4"
+        },
+        "license_reported": {
+          "answerable": "26/27",
+          "unanswerable": "13/14"
+        },
+        "month": {
+          "answerable": "8/21",
+          "unanswerable": "8/8"
+        },
+        "references": {
+          "answerable": "8/24",
+          "unanswerable": "7/7"
+        },
+        "type": {
+          "answerable": "23/24",
+          "unanswerable": "5/5"
+        },
+        "year": {
+          "answerable": "17/30",
+          "unanswerable": "2/4"
+        }
+      }
+    },
+    "training_majority": {
+      "n_questions": 200,
+      "n_answerable": 158,
+      "n_unanswerable": 42,
+      "em_correct": 48,
+      "em_total": 158,
+      "abstention_correct": 8,
+      "abstention_total": 42,
+      "unsupported_count": 34,
+      "unsupported_total": 42,
+      "incomplete_count": 0,
+      "incomplete_total": 200,
+      "wrong_answer_on_answerable": 89,
+      "false_unknown_on_answerable": 21,
+      "per_field": {
+        "authors": {
+          "answerable": "10/32",
+          "unanswerable": "0/4"
+        },
+        "license_reported": {
+          "answerable": "13/27",
+          "unanswerable": "0/14"
+        },
+        "month": {
+          "answerable": "0/21",
+          "unanswerable": "8/8"
+        },
+        "references": {
+          "answerable": "8/24",
+          "unanswerable": "0/7"
+        },
+        "type": {
+          "answerable": "12/24",
+          "unanswerable": "0/5"
+        },
+        "year": {
+          "answerable": "5/30",
+          "unanswerable": "0/4"
+        }
+      }
+    },
+    "field_reading_rule": {
+      "n_questions": 200,
+      "n_answerable": 158,
+      "n_unanswerable": 42,
+      "em_correct": 158,
+      "em_total": 158,
+      "abstention_correct": 42,
+      "abstention_total": 42,
+      "unsupported_count": 0,
+      "unsupported_total": 42,
+      "incomplete_count": 0,
+      "incomplete_total": 200,
+      "wrong_answer_on_answerable": 0,
+      "false_unknown_on_answerable": 0,
+      "per_field": {
+        "authors": {
+          "answerable": "32/32",
+          "unanswerable": "4/4"
+        },
+        "license_reported": {
+          "answerable": "27/27",
+          "unanswerable": "14/14"
+        },
+        "month": {
+          "answerable": "21/21",
+          "unanswerable": "8/8"
+        },
+        "references": {
+          "answerable": "24/24",
+          "unanswerable": "7/7"
+        },
+        "type": {
+          "answerable": "24/24",
+          "unanswerable": "5/5"
+        },
+        "year": {
+          "answerable": "30/30",
+          "unanswerable": "4/4"
+        }
+      }
+    },
+    "field_reading_rule_on_retrieved": {
+      "n_questions": 200,
+      "n_answerable": 158,
+      "n_unanswerable": 42,
+      "em_correct": 156,
+      "em_total": 158,
+      "abstention_correct": 39,
+      "abstention_total": 42,
+      "unsupported_count": 3,
+      "unsupported_total": 42,
+      "incomplete_count": 0,
+      "incomplete_total": 200,
+      "wrong_answer_on_answerable": 1,
+      "false_unknown_on_answerable": 1,
+      "retrieval_correct": 188,
+      "retrieval_total": 200,
+      "answerable_errors_wrong_card": 2,
+      "answerable_errors_right_card": 0,
+      "per_field": {
+        "authors": {
+          "answerable": "32/32",
+          "unanswerable": "3/4"
+        },
+        "license_reported": {
+          "answerable": "26/27",
+          "unanswerable": "13/14"
+        },
+        "month": {
+          "answerable": "21/21",
+          "unanswerable": "8/8"
+        },
+        "references": {
+          "answerable": "24/24",
+          "unanswerable": "7/7"
+        },
+        "type": {
+          "answerable": "24/24",
+          "unanswerable": "5/5"
+        },
+        "year": {
+          "answerable": "29/30",
+          "unanswerable": "3/4"
+        }
+      }
+    }
+  }
+}

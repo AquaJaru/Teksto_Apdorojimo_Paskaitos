@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>L4 · Mano GPT asistentas</title>
+<style>
+:root{color-scheme:light dark;
+--bg:light-dark(#f4f6f7,#0e1416);--card:light-dark(#ffffff,#161e21);--ink:light-dark(#14181c,#e6ecee);--mute:light-dark(#5c656d,#94a3a8);
+--line:light-dark(#dde2e6,#2a3539);--soft:light-dark(#eef3f4,#1c272a);--acc:light-dark(#0b5d63,#4fb3ba);--accs:light-dark(#d6ecee,#173b3e);
+--ok:light-dark(#1e7a46,#5cc98b);--oks:light-dark(#e1f3e8,#163222);--warn:light-dark(#9a5b00,#f0b35a);--warns:light-dark(#fdf1dc,#3a2a10);
+--bad:light-dark(#b3261e,#f07a70);--bads:light-dark(#fbe6e4,#3d1c19);--hl:light-dark(#ffe99a,#5a4c12)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:24px 16px 48px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+h1{font-size:28px;line-height:1.1;margin:0;letter-spacing:-.01em}
+.sub{color:var(--mute);margin:6px 0 0;font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:12.5px;padding:4px 10px;border-radius:99px;background:var(--card);border:1px solid var(--line);color:var(--mute)}
+.chip b{color:var(--ink);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+form.card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px) auto;gap:12px 14px;align-items:end}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--mute);font-weight:500}
+input[type=text],select{font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+input[type=text]:focus,select:focus,button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+button.go{font:inherit;font-weight:600;font-size:16px;padding:11px 26px;border:0;border-radius:8px;background:var(--acc);color:light-dark(#fff,#0e1416);cursor:pointer;min-height:46px}
+button.go:disabled{opacity:.55;cursor:progress}
+.modes{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.modes .lbl{font-size:13px;color:var(--mute);margin-right:4px}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg label{display:flex;align-items:center;gap:6px;padding:8px 12px;font-size:14px;cursor:pointer;border-right:1px solid var(--line)}
+.seg label:last-child{border-right:0}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){background:var(--accs);color:var(--ink);font-weight:600}
+.seg label:has(input:focus-visible){outline:2px solid var(--acc);outline-offset:-2px}
+#manualId{max-width:360px}
+.examples{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;font-size:13px;color:var(--mute);align-items:center}
+.examples button{font:inherit;font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:99px;background:transparent;color:var(--ink);cursor:pointer}
+.examples button:hover{background:var(--soft)}
+.pipe{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0;position:relative}
+.stage{position:relative;padding:14px 14px 16px}
+.stage:not(:last-child)::after{content:"";position:absolute;right:-12px;top:50%;width:10px;height:10px;border-top:2px solid var(--line);border-right:2px solid var(--line);transform:translateY(-50%) rotate(45deg)}
+.stage .h{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--mute);margin-bottom:8px}
+.stage .n{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;background:var(--soft);color:var(--mute)}
+.stage.done .n{background:var(--acc);color:#fff}
+.stage.err .n{background:var(--bad);color:#fff}
+.stage .v{font-weight:600;line-height:1.3;overflow-wrap:anywhere}
+.stage .m{font-size:13px;color:var(--mute);margin-top:4px}
+.grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px}
+.answer{display:flex;flex-direction:column;gap:10px}
+.answer .big{font-size:40px;font-weight:700;line-height:1.05;letter-spacing:-.01em;overflow-wrap:anywhere}
+.status{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:8px;font-size:14px}
+.status b{display:block}
+.s-ok{background:var(--oks);color:var(--ok)}.s-warn{background:var(--warns);color:var(--warn)}.s-bad{background:var(--bads);color:var(--bad)}
+.status span{color:var(--ink)}
+.kv{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--mute)}
+.kv b{color:var(--ink);font-variant-numeric:tabular-nums}
+h2{font-size:15px;margin:0 0 10px;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+h2 small{font-weight:400;color:var(--mute);font-size:12.5px}
+.cand{display:grid;grid-template-columns:28px minmax(0,1fr) 92px;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.cand:first-of-type{border-top:0}
+.cand .r{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:600;background:var(--soft)}
+.cand.used .r{background:var(--acc);color:#fff}
+.cand a{color:var(--ink);font-weight:500;text-decoration:none;border-bottom:1px solid var(--line)}
+.cand a:hover{border-color:var(--acc)}
+.cand .id{font:12px ui-monospace,Menlo,monospace;color:var(--mute);overflow-wrap:anywhere}
+.cand .sc{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.meter{height:6px;border-radius:3px;background:var(--soft);margin-top:4px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--acc)}
+.used-tag{font-size:11.5px;font-weight:600;color:var(--acc);margin-left:6px}
+.note{font-size:12.5px;color:var(--mute);margin:8px 0 0}
+.ctx{font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--soft);border-radius:8px;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+mark{background:var(--hl);color:inherit;border-radius:3px;padding:0 2px}
+.toks{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.tok{font:12px ui-monospace,Menlo,monospace;padding:2px 6px;border-radius:4px;background:var(--soft);border:1px solid var(--line)}
+.tok.sp{background:var(--accs);border-color:transparent;color:var(--acc);font-weight:600}
+.tok.unk{background:var(--bads);color:var(--bad)}
+.tok.gen{background:var(--oks);color:var(--ok);font-weight:600}
+details{margin-top:10px}summary{cursor:pointer;font-size:13.5px;color:var(--mute)}
+.src{display:flex;flex-direction:column;gap:4px}
+.src .t{font-weight:600}
+.src a{color:var(--acc);overflow-wrap:anywhere}
+.error{display:flex;gap:12px;align-items:flex-start;background:var(--bads);color:var(--bad);border:1px solid var(--bad);border-radius:10px;padding:14px 16px;margin-top:18px}
+.error b{display:block}.error span{color:var(--ink)}
+.empty{text-align:center;color:var(--mute);padding:36px 16px;margin-top:18px;border:1px dashed var(--line);border-radius:12px}
+.col{display:flex;flex-direction:column;gap:18px}
+.history{margin-top:18px}
+.history table{width:100%;border-collapse:collapse;font-size:13.5px}
+.history td,.history th{text-align:left;padding:6px 8px;border-top:1px solid var(--line)}
+.history th{color:var(--mute);font-weight:500;border-top:0}
+.spin{width:16px;height:16px;border:2px solid #fff6;border-top-color:#fff;border-radius:50%;display:inline-block;vertical-align:-3px;margin-right:8px;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.spin{animation:none}}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:0 0 18px;overflow-x:auto}
+.tabs button{flex:none;font:inherit;font-weight:600;font-size:15px;padding:10px 16px;border:0;border-bottom:3px solid transparent;background:none;color:var(--mute);cursor:pointer;min-height:44px}
+.tabs button[aria-selected=true]{color:var(--ink);border-color:var(--acc)}
+.tabs button:focus-visible{outline:2px solid var(--acc)}
+.rep{display:flex;flex-direction:column;gap:18px}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.fig{padding:14px}.fig b{display:block;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}.fig span{font-size:13px;color:var(--mute)}
+.lead{font-size:16px;margin:0 0 10px}
+h3{font-size:14px;margin:0 0 6px}
+table.t{width:100%;border-collapse:collapse;font-size:14px}
+table.t th,table.t td{text-align:left;padding:8px;border-top:1px solid var(--line);vertical-align:top}
+table.t th{color:var(--mute);font-weight:500;font-size:13px;border-top:0}
+table.t td.n,table.t th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.t tr.g td{background:var(--soft);font-weight:600}
+.hb{display:flex;align-items:center;gap:8px;justify-content:flex-end;white-space:nowrap}.hb i{display:block;height:8px;border-radius:4px;background:var(--acc);flex:none}.hb i.q{background:var(--mute);opacity:.5}
+.db{display:grid;grid-template-columns:8em minmax(0,1fr) 7em;gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.db .ln{position:relative;height:18px}.db .ax{position:absolute;left:0;right:0;top:8px;height:2px;background:var(--line)}
+.db .sg{position:absolute;top:7px;height:4px;background:var(--bads)}
+.db .dt{position:absolute;top:2px;width:14px;height:14px;margin-left:-7px;border-radius:50%}
+.pre{white-space:pre-wrap;font:13px/1.5 ui-monospace,Menlo,monospace;background:var(--soft);border-radius:8px;padding:12px;margin:0;overflow-wrap:anywhere}
+.ecards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px}
+.ec{border:1px solid var(--line);border-radius:10px;padding:14px}
+.ec .k{font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px}
+svg.loss{width:100%;height:auto;display:block}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+@media(max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:480px){.db{grid-template-columns:6em minmax(0,1fr) 5.5em}}
+@media(max-width:860px){form.card{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:minmax(0,1fr)}.pipe{grid-template-columns:repeat(2,minmax(0,1fr))}.stage:nth-child(2)::after{display:none}}
+@media(max-width:480px){.pipe{grid-template-columns:minmax(0,1fr)}.stage::after{display:none}.answer .big{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div><h1>Mano GPT asistentas</h1><p class="sub" id="meta">Kraunama konfigūracija…</p></div>
+  <div class="chips" id="chips"></div>
+</header>
+
+<nav class="tabs" role="tablist"><button role="tab" id="t-ask" aria-selected="true" type="button">Klausti modelio</button><button role="tab" id="t-rep" aria-selected="false" type="button">Rezultatai ir pakeitimai</button></nav>
+<div id="tab-ask">
+<form class="card" id="f" autocomplete="off">
+  <label class="f">Dokumento pavadinimas ar raktažodžiai<input type="text" id="keywords" list="examples-list" maxlength="400"></label>
+  <label class="f">Klausimas<select id="field"></select></label>
+  <button class="go" id="run" type="submit">Atsakyti</button>
+  <datalist id="examples-list"></datalist>
+  <div class="modes">
+    <span class="lbl">Kontekstas modeliui:</span>
+    <div class="seg" role="radiogroup">
+      <label><input type="radio" name="mode" value="retrieval" checked>Paieškos top‑1</label>
+      <label><input type="radio" name="mode" value="manual">Pasirinkta kortelė</label>
+      <label><input type="radio" name="mode" value="no_source">Be šaltinio</label>
+    </div>
+    <select id="manualId" hidden aria-label="Kortelė"></select>
+  </div>
+  <div class="examples" id="examples"></div>
+</form>
+
+<div id="result"><div class="empty">Įveskite publikacijos pavadinimą, pasirinkite klausimą ir spauskite „Atsakyti“.<br>Bus parodyti visi etapai: užklausa → paieška → kontekstas → GPT atsakymas.</div></div>
+
+<div class="card history" id="historyBox" hidden><h2>Šios sesijos užklausos <small>naujausios viršuje</small></h2><div style="overflow-x:auto"><table><thead><tr><th>Užklausa</th><th>Laukas</th><th>Režimas</th><th>Kortelė</th><th>GPT</th><th>Būsena</th></tr></thead><tbody id="history"></tbody></table></div></div>
+</div>
+<div id="tab-rep" class="rep" hidden><div class="empty">Kraunami rezultatai…</div></div>
+</div>
+
+<script>
+{
+let cfg=null,lastRanked=[];const hist=[];
+const $=s=>document.querySelector(s);
+const el=(tag,attrs={},...kids)=>{const e=document.createElement(tag);for(const[k,v]of Object.entries(attrs)){if(v==null)continue;if(k==='class')e.className=v;else if(k==='text')e.textContent=v;else e.setAttribute(k,v)}for(const c of kids)if(c!=null)e.append(c);return e};
+const mode=()=>document.querySelector('input[name=mode]:checked').value;
+const qtext=f=>cfg.questions[f][cfg.lang==='EN'?0:1];
+const MODE={retrieval:'paieškos top‑1',manual:'pasirinkta kortelė',no_source:'be šaltinio'};
+const reEsc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const fieldValue=(ctx,f)=>{const m=(ctx||'').match(new RegExp('(?:^|;\\s*)'+reEsc(f)+'\\s*:\\s*([^;]+?)\\s*;'));return m?m[1]:null};
+const norm=s=>(s||'').toLowerCase().replace(/\s+/g,'');
+
+fetch('/config').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(c=>{
+  cfg=c;$('#meta').textContent='Atsakymą generuoja nuo nulio išmokytas mažas GPT; kortelę parenka vietinė LSA paieška.';
+  $('#chips').replaceChildren(el('span',{class:'chip'},'Tema ',el('b',{text:c.topic})),el('span',{class:'chip'},'Kalba ',el('b',{text:c.lang})),el('span',{class:'chip'},'Klausimų tipai ',el('b',{text:String(Object.keys(c.questions).length)})));
+  $('#keywords').value=c.examples[0].title;
+  for(const e of c.examples)$('#examples-list').append(el('option',{value:e.title}));
+  for(const[k,v]of Object.entries(c.questions))$('#field').append(el('option',{value:k,text:v[c.lang==='EN'?0:1]}));
+  const ex=$('#examples');ex.append('Pavyzdžiai:');
+  for(const e of c.examples.slice(0,4)){const b=el('button',{type:'button',text:e.title.length>42?e.title.slice(0,40)+'…':e.title,title:e.title});b.onclick=()=>{$('#keywords').value=e.title;$('#keywords').focus()};ex.append(b)}
+}).catch(e=>showError('Nepavyko gauti konfigūracijos','/config: '+e.message+'. Ar paleistas app.py?'));
+
+document.querySelectorAll('input[name=mode]').forEach(r=>r.onchange=()=>{$('#manualId').hidden=mode()!=='manual';if(mode()==='manual')fillManual()});
+function fillManual(){const s=$('#manualId');const keep=s.value;s.replaceChildren();if(!lastRanked.length){s.append(el('option',{value:'',text:'Pirma paleiskite paiešką'}));return}for(const r of lastRanked)s.append(el('option',{value:r.id,text:r.title.slice(0,70)}));if(keep)s.value=keep}
+
+$('#f').addEventListener('submit',async ev=>{ev.preventDefault();if(!cfg)return;
+  const b=$('#run');b.disabled=true;b.replaceChildren(el('span',{class:'spin'}),'Generuojama');
+  const body={keywords:$('#keywords').value.trim(),field:$('#field').value,mode:mode()};
+  if(body.mode==='manual'){body.selected_id=$('#manualId').value;if(!body.selected_id){showError('Nepasirinkta kortelė','Pirma paleiskite paiešką, tada pasirinkite vieną iš trijų kandidatų.');b.disabled=false;b.textContent='Atsakyti';return}}
+  try{const r=await fetch('/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const data=await r.json().catch(()=>({error:'Serveris grąžino ne JSON atsakymą'}));
+    if(!r.ok||data.error)showError('Vykdymo klaida (HTTP '+r.status+')',data.error||'nežinoma klaida');else render(data,body);
+  }catch(e){showError('Nepavyko pasiekti serverio',e.message+'. Patikrinkite, ar app.py dar veikia.')}
+  finally{b.disabled=false;b.textContent='Atsakyti'}});
+
+function showError(title,msg){$('#result').replaceChildren(el('div',{class:'error',role:'alert'},el('div',{},el('b',{text:title}),el('span',{text:msg}))))}
+
+function verdict(d,field){
+  const ans=d.answer,fv=fieldValue(d.context,field);
+  if(!d.eos)return{cls:'s-bad',t:'Generavimas nesibaigė',m:'Modelis nepasiekė <eos> per 8 tokenus; atsakymas gali būti nepilnas.',short:'nebaigta'};
+  if(ans==='[empty]')return{cls:'s-bad',t:'Tuščias atsakymas',m:'Modelis iš karto sugeneravo <eos>.',short:'tuščia'};
+  if(ans==='unknown'){
+    if(fv!=null)return{cls:'s-bad',t:'Informacijos nėra – bet laukas kontekste yra',m:`Modelis atsakė unknown, nors kortelėje parašyta ${field} : ${fv}. Tai modelio klaida.`,short:'klaidingas unknown'};
+    return{cls:'s-warn',t:'Informacijos nėra',m:d.context?`Perduotame kontekste nėra lauko „${field}“, todėl teisingas atsakymas – unknown.`:'Modeliui neperduotas joks šaltinis.',short:'unknown'}}
+  if(fv==null)return{cls:'s-bad',t:'Nepagrįstas atsakymas',m:d.context?`Lauko „${field}“ kontekste nėra, o modelis vis tiek atsakė.`:'Be šaltinio modelis spėja iš mokymo dažnių.',short:'nepagrįsta'};
+  if(norm(fv)===norm(ans))return{cls:'s-ok',t:'Atsakymas sutampa su konteksto lauku',m:`Pagrindžia laukas ${field} : ${fv}.`,short:'sutampa'};
+  return{cls:'s-bad',t:'Atsakymas nesutampa su konteksto lauku',m:`Kortelėje parašyta ${field} : ${fv}, o modelis sugeneravo kitą reikšmę. Tai modelio klaida.`,short:'nesutampa'}}
+
+function highlight(ctx,field){const pre=el('pre',{class:'ctx'});if(!ctx){pre.append(el('span',{style:'color:var(--mute)',text:'(tuščias kontekstas – modelis negavo jokio šaltinio teksto)'}));return pre}
+  const m=ctx.match(new RegExp('(^|;\\s*)('+reEsc(field)+'\\s*:\\s*[^;]+?)(\\s*;)'));if(!m){pre.append(ctx);return pre}
+  const i=m.index+m[1].length;pre.append(ctx.slice(0,i),el('mark',{text:m[2]}),ctx.slice(i+m[2].length));return pre}
+
+function render(d,req){
+  lastRanked=d.ranked||[];if(mode()==='manual')fillManual();
+  const field=req.field,v=verdict(d,field),top=lastRanked[0],used=d.source?d.source.id:null;
+  const retrievalOk=d.mode!=='retrieval'||!!d.source;
+  const stage=(n,title,val,meta,state)=>el('div',{class:'card stage '+state},el('div',{class:'h'},el('span',{class:'n',text:String(n)}),title),el('div',{class:'v',text:val}),el('div',{class:'m',text:meta}));
+  const pipe=el('div',{class:'pipe'},
+    stage(1,'Užklausa',d.keywords||req.keywords,'Klausimas: '+(d.question_text||qtext(field)),'done'),
+    stage(2,'Paieška',top?top.title:'—',top?`top‑1 balas ${top.score.toFixed(3)} · ${d.search_ms.toFixed(1)} ms`:'kandidatų nėra',retrievalOk?'done':'err'),
+    stage(3,'Kontekstas',d.source?d.source.id:'(be šaltinio)',MODE[d.mode]+' · '+(fieldValue(d.context,field)!=null?`laukas „${field}“ yra`:`lauko „${field}“ nėra`),'done'),
+    stage(4,'GPT atsakymas',d.answer,`${d.generation_ms.toFixed(0)} ms · ${d.eos?'baigta <eos>':'nebaigta'}`,v.cls==='s-ok'||v.cls==='s-warn'?'done':'err'));
+  const ans=el('div',{class:'card answer'},el('h2',{},'GPT sugeneruotas atsakymas',el('small',{text:'generuota tokenas po tokeno'})),el('div',{class:'big',text:d.answer}),
+    el('div',{class:'status '+v.cls,role:'status'},el('div',{},el('b',{text:v.t}),el('span',{text:v.m}))),
+    el('div',{class:'kv'},el('span',{},'Modelis ',el('b',{text:d.parameters.toLocaleString('lt')}),' parametrų'),el('span',{},'Generavimas ',el('b',{text:d.generation_ms.toFixed(0)+' ms'})),el('span',{},'Pabaiga ',el('b',{text:d.eos?'<eos>':'riba (8)'}))),
+    el('p',{class:'note',text:'Būsena tikrinama lyginant atsakymą su perduotu kontekstu; etaloninis atsakymas sąsajoje nenaudojamas ir atsakymas nekeičiamas.'}));
+  const src=el('div',{class:'card src'},el('h2',{text:'Šaltinis'}));
+  if(d.source)src.append(el('div',{class:'t',text:d.source.title}),el('a',{href:d.source.source_url,target:'_blank',rel:'noopener',text:d.source.source_url}),el('div',{class:'note',text:`Įrašas ${d.source.id} · licencija ${d.source.license||'—'} · pasirinkta: ${MODE[d.mode]}`}));
+  else src.append(el('div',{class:'note',text:'Šiame režime modeliui šaltinis neperduodamas – matosi, ką GPT „žino“ be konteksto.'}));
+  const toks=el('div',{class:'toks'});for(const t of d.prompt_tokens||[])toks.append(el('span',{class:'tok'+(t.startsWith('<')&&t.endsWith('>')?(t==='<unk>'?' unk':' sp'):''),text:t}));
+  if(d.eos||d.answer)for(const t of (d.answer==='[empty]'?[]:d.answer.split(' ')))toks.append(el('span',{class:'tok gen',text:t}));
+  if(d.eos)toks.append(el('span',{class:'tok gen',text:'<eos>'}));
+  const unk=(d.prompt_tokens||[]).filter(t=>t==='<unk>').length;
+  const ctx=el('div',{class:'card'},el('h2',{},'Tikras modeliui perduotas kontekstas',el('small',{text:'klausiamas laukas paryškintas'})),highlight(d.context,field),
+    el('details',{},el('summary',{text:`Modelio įvestis tokenais (${(d.prompt_tokens||[]).length})${unk?` · ${unk} nežinomi žodžiai <unk>`:''}`}),toks,el('p',{class:'note',text:'Mėlyni – specialieji tokenai, žali – GPT sugeneruoti tokenai. Skaičiai skaidomi po vieną skaitmenį.'})));
+  const cands=el('div',{class:'card'},el('h2',{},'Trys paieškos kandidatai',el('small',{text:'kosinuso panašumas'})));
+  lastRanked.forEach((r,i)=>{const isUsed=r.id===used;cands.append(el('div',{class:'cand'+(isUsed?' used':'')},el('span',{class:'r',text:String(i+1)}),
+    el('div',{},el('a',{href:r.url,target:'_blank',rel:'noopener',text:r.title}),isUsed?el('span',{class:'used-tag',text:'perduota modeliui'}):null,el('div',{class:'id',text:r.id})),
+    el('div',{class:'sc'},el('div',{text:r.score.toFixed(3)}),el('div',{class:'meter'},el('i',{style:`width:${Math.max(2,Math.min(1,Math.max(0,r.score))*100)}%`})))))});
+  if(lastRanked.length>1&&Math.abs(lastRanked[0].score-lastRanked[1].score)<1e-6)cands.append(el('div',{class:'status s-warn',style:'margin-top:10px'},el('div',{},el('b',{text:'Lygūs balai'}),el('span',{text:'Du kandidatai vienodai panašūs (dažnai – identiški pavadinimai). Patikrinkite, ar pirmasis tikrai tas dokumentas; jei ne, tai paieškos klaida.'}))));
+  cands.append(el('p',{class:'note',text:'Balas parodo užklausos ir dokumento LSA vektorių panašumą. Tai nėra atsakymo patikimumo procentas.'}));
+  $('#result').replaceChildren(pipe,el('div',{class:'grid'},el('div',{class:'col'},ans,ctx),el('div',{class:'col'},cands,src)));
+  hist.unshift({q:req.keywords,f:field,m:MODE[d.mode],id:used||'—',a:d.answer,s:v.short,cls:v.cls});
+  $('#historyBox').hidden=false;$('#history').replaceChildren(...hist.slice(0,8).map(h=>el('tr',{},el('td',{text:h.q.length>48?h.q.slice(0,46)+'…':h.q}),el('td',{text:h.f}),el('td',{text:h.m}),el('td',{text:h.id}),el('td',{},el('b',{text:h.a})),el('td',{},el('span',{class:'status '+h.cls,style:'padding:2px 8px;display:inline-block',text:h.s})))));
+}
+let repLoaded=false;
+const pc=(a,b)=>b?(100*a/b).toFixed(1).replace('.',',')+' %':'—';
+const frac=(a,b)=>`${a}/${b}`;
+function setTab(which){const rep=which==='rep';$('#tab-ask').hidden=rep;$('#tab-rep').hidden=!rep;$('#t-ask').setAttribute('aria-selected',String(!rep));$('#t-rep').setAttribute('aria-selected',String(rep));
+  try{history.replaceState(null,'',rep?'#rezultatai':'#')}catch(_){}
+  if(rep&&!repLoaded)loadReport()}
+$('#t-ask').onclick=()=>setTab('ask');$('#t-rep').onclick=()=>setTab('rep');
+if(location.hash==='#rezultatai')setTab('rep');
+async function loadReport(){
+  try{const r=await fetch('/report');if(!r.ok)throw new Error('HTTP '+r.status);const d=await r.json();repLoaded=true;renderReport(d)}
+  catch(e){$('#tab-rep').replaceChildren(el('div',{class:'error',role:'alert'},el('div',{},el('b',{text:'Nepavyko įkelti rezultatų'}),el('span',{text:e.message}))))}}
+const card=(title,sub,...kids)=>el('section',{class:'card'},el('h2',{},title,sub?el('small',{text:sub}):null),...kids);
+const tbl=(head,rows,numCols=[])=>{const t=el('table',{class:'t'});const tr=el('tr');head.forEach((h,i)=>tr.append(el('th',{class:numCols.includes(i)?'n':null,text:h})));t.append(el('thead',{},tr));const tb=el('tbody');rows.forEach(r=>{if(r.group){tb.append(el('tr',{class:'g'},el('td',{colspan:String(head.length),text:r.group})));return}const x=el('tr');r.forEach((c,i)=>x.append(el('td',{class:numCols.includes(i)?'n':null},c instanceof Node?c:String(c))));tb.append(x)});t.append(tb);return el('div',{style:'overflow-x:auto'},t)};
+const COND=[['no_source','Be šaltinio',1],['correct_card','Teisinga kortelė (pagal document_id)',1],['retrieved_card','Paieškos top‑1 kortelė',1],['training_majority','Daugumos atsakymas (ne GPT)',0],['field_reading_rule','Lauko skaitymo taisyklė (ne GPT)',0]];
+function emCell(r,gpt){const w=r.em_total?r.em_correct/r.em_total*100:0;return el('div',{class:'hb'},el('i',{class:gpt?null:'q',style:`width:${Math.max(2,w*0.9)}px`}),el('span',{text:`${frac(r.em_correct,r.em_total)} (${pc(r.em_correct,r.em_total)})`}))}
+function ctxBox(ctx,field){return highlight(ctx,field)}
+function lossSvg(h,h2){const W=560,H=260,L=40,R=16,T=14,B=30;const xmax=Math.max(...h.map(r=>r.step),...(h2||[]).map(r=>r.step));const ymax=Math.max(0.7,...h.map(r=>r.val),...(h2||[]).map(r=>r.val));
+  const X=v=>L+v/xmax*(W-L-R),Y=v=>T+(1-v/ymax)*(H-T-B);const NS='http://www.w3.org/2000/svg';const svg=document.createElementNS(NS,'svg');svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.setAttribute('class','loss');svg.setAttribute('role','img');svg.setAttribute('aria-label','Nuostolis pagal mokymo žingsnį');
+  const add=(tag,attrs,text)=>{const e=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);if(text!=null)e.textContent=text;svg.append(e);return e};
+  const step=ymax>1?0.4:0.2;for(let v=0;v<=ymax+1e-9;v+=step){add('line',{x1:L,x2:W-R,y1:Y(v),y2:Y(v),stroke:'var(--line)'});add('text',{x:L-6,y:Y(v)+4,'text-anchor':'end','font-size':11,fill:'var(--mute)'},v.toFixed(1).replace('.',','))}
+  [0,Math.round(xmax/2/500)*500,xmax].forEach(v=>add('text',{x:X(v),y:H-8,'text-anchor':'middle','font-size':11,fill:'var(--mute)'},String(v)));
+  const path=(rows,key,col,dash)=>add('path',{d:rows.map((r,i)=>(i?'L':'M')+X(r.step).toFixed(1)+' '+Y(r[key]).toFixed(1)).join(''),fill:'none',stroke:col,'stroke-width':2,'stroke-dasharray':dash||''});
+  path(h,'train','var(--mute)','4 4');path(h,'val','var(--acc)');if(h2&&h2.length)path(h2,'val','var(--bad)');
+  return svg}
+function renderReport(d){
+  const box=$('#tab-rep');box.replaceChildren();
+  const V=d.validation&&d.validation.results,Tt=d.test&&d.test.results,M=d.model;
+  if(M&&Tt){box.append(el('div',{class:'figs'},
+    ...[[M.parameters.toLocaleString('lt'),'parametrų (nuo nulio)'],[(M.wall_seconds/60).toFixed(1).replace('.',',')+' min','mokymas CPU'],[frac(Tt.correct_card.em_correct,Tt.correct_card.em_total),'testas: teisinga kortelė'],[frac(Tt.retrieved_card.em_correct,Tt.retrieved_card.em_total),'testas: su paieška'],[frac(Tt.retrieved_card.retrieval_correct,Tt.retrieved_card.retrieval_total),'paieškos top‑1 (testas)'],[frac(Tt.no_source.em_correct,Tt.no_source.em_total),'testas: be šaltinio']]
+    .map(([b,s])=>el('div',{class:'card fig'},el('b',{text:b}),el('span',{text:s})))))}
+  if(V){const rows=[];for(const[name,R]of[['Validavimas',V],['Testas (paleistas vieną kartą)',Tt]]){if(!R)continue;rows.push({group:name});for(const[k,n,g]of COND){const r=R[k];if(!r)continue;rows.push([n,r.retrieval_total?`${frac(r.retrieval_correct,r.retrieval_total)} (${pc(r.retrieval_correct,r.retrieval_total)})`:'netaikoma',emCell(r,g),`${frac(r.abstention_correct,r.abstention_total)} (${pc(r.abstention_correct,r.abstention_total)})`,frac(r.unsupported_count,r.unsupported_total),frac(r.incomplete_count,r.incomplete_total)])}}
+    const rc=V.retrieved_card;
+    box.append(card('Eksperimentas: trys sąlygos ir du paprasti būdai','tas pats modelis, tie patys klausimai',
+      el('p',{class:'lead',text:'Be šaltinio GPT beveik nieko neatsako teisingai, todėl atsakymą jis ima iš kortelės. Lauko skaitymo taisyklė lenkia GPT, nes kortelės visiškai struktūruotos.'}),
+      tbl(['Sąlyga','Paieškos top‑1','Atsakomų EM','Teisingas unknown','Nepagrįsti','Neužbaigti'],rows,[1,3,4,5]),
+      el('p',{class:'note',text:`Validavime su paieška: ${rc.answerable_errors_wrong_card} atsakomų klaidos dėl blogos kortelės (paieškos klaida), ${rc.answerable_errors_right_card} su teisinga kortele (GPT klaida). Daugumos atsakymai paimti tik iš train: ${Object.entries(d.validation.majority||{}).map(([k,v])=>k+' = '+v).join(', ')}.`})))}
+  if(M){const c=M.config;const left=el('div',{},tbl(['Nustatymas','Reikšmė'],[['Architektūra',`${c.blocks} blokai, d = ${c.dim}, ${c.heads} galvos, kontekstas ${c.context}`],['Parametrai / žodynas',`${M.parameters.toLocaleString('lt')} / ${M.vocab} tokenų`],['Mokymo duomenys',`${M.train_rows} porų, validavimas ${M.validation_rows}`],['Optimizavimas',`AdamW, lr ${c.lr}, batch ${c.batch}, seed ${c.seed}`],['Trukmė',`${M.steps} žingsnių, ${Math.round(M.wall_seconds)} s, ${M.training_device}, ${M.threads} gija`],['Geriausias validavimo EM',String(M.best_validation_em)],['Aplinka',`Python ${M.python}, torch ${M.torch}`]]));
+    const right=el('div',{},d.history?lossSvg(d.history,null):'',el('div',{class:'note'},el('span',{style:'color:var(--acc);font-weight:600',text:'— validavimo nuostolis'}),' · ',el('span',{text:'- - mokymo nuostolis (paskutinis batch)'})),el('p',{class:'note',text:'Mokymo nuostolis krenta beveik iki 0, validavimo lieka apie 0,3–0,4: modelis dalį porų įsimena. Ankstyvas sustojimas pagal validavimo EM.'}));
+    box.append(card('Modelis ir mokymas','pradėta nuo atsitiktinių svorių',el('div',{class:'two'},left,right)))}
+  if(d.repair){const p=d.repair,bf=p.base.per_field,af=p.after.per_field;const dumb=el('div');
+    for(const f of Object.keys(bf)){const[a,n]=bf[f].answerable.split('/').map(Number),[b]=af[f].answerable.split('/').map(Number);const pa=a/n*100,pb=b/n*100;
+      dumb.append(el('div',{class:'db'},el('code',{text:f}),el('div',{class:'ln',title:`${f}: ${a}/${n} → ${b}/${n}`},el('div',{class:'ax'}),el('div',{class:'sg',style:`left:${Math.min(pa,pb)}%;width:${Math.abs(pa-pb)}%`}),el('div',{class:'dt',style:`left:${pb}%;background:var(--bad)`}),el('div',{class:'dt',style:`left:${pa}%;background:var(--acc)`})),el('span',{style:'text-align:right'},`${a}/${n} → `,el('b',{class:b<a?'bad':'',style:b<a?'color:var(--bad)':'',text:String(b)}))))}
+    const s7=p.seed7?` Kitas seed (7) be pakeitimo: ${frac(p.seed7.em_correct,p.seed7.em_total)} – tiek svyruoja vien atsitiktinumas.`:'';
+    box.append(card('Mano pataisymas: laukų tvarkos maišymas','vienas pakeitimas, tas pats validavimas',
+      el('div',{class:'two'},
+        el('div',{},el('h3',{text:'Prognozė prieš bandymą'}),el('pre',{class:'pre',text:p.prediction.trim()}),
+          el('p',{class:'lead',style:'margin-top:12px'},'Rezultatas su teisinga kortele: ',el('b',{text:`${frac(p.base.em_correct,p.base.em_total)} → ${frac(p.after.em_correct,p.after.em_total)}`}),` (${pc(p.base.em_correct,p.base.em_total)} → ${pc(p.after.em_correct,p.after.em_total)}). Teisingas unknown: ${frac(p.base.abstention_correct,p.base.abstention_total)} → ${frac(p.after.abstention_correct,p.after.abstention_total)}.${s7}`),
+          el('p',{class:'note',text:'Išvada: prognozė nepasitvirtino. Bazinis modelis skaitinius laukus atskyrė pagal fiksuotą jų tvarką; sumaišius tvarką mažas modelis nebeatskiria, kuris skaičius kuris. Pataisymas neįtrauktas, testui paliktas bazinis modelis.'})),
+        el('div',{},el('h3',{text:'Atsakomų EM pagal lauką'}),el('div',{class:'note',style:'margin:0 0 6px'},el('span',{style:'color:var(--acc);font-weight:600',text:'● bazinis'}),'  ',el('span',{style:'color:var(--bad);font-weight:600',text:'● po pakeitimo'})),dumb,
+          p.history_after&&p.history_after.length&&d.history?el('div',{style:'margin-top:12px'},lossSvg(d.history,p.history_after),el('p',{class:'note',text:'Validavimo nuostolis: mėlyna – bazinis, raudona – su laukų maišymu.'})):''))))}
+  if(d.errors){const E=d.errors;const ec=(kind,cls,c,why)=>el('div',{class:'ec'},el('span',{class:'k '+cls,text:kind}),el('div',{class:'note',style:'margin:0 0 6px',text:`${c.document_id} · laukas ${c.field}`}),ctxBox(c.context,c.field),el('div',{class:'kv',style:'margin-top:8px'},el('span',{},'Laukta ',el('b',{text:c.answer})),el('span',{},'GPT ',el('b',{style:'color:var(--bad)',text:c.generated}))),el('p',{class:'note',text:why(c)}));
+    box.append(card('Konkrečios klaidos',`GPT klaidų su teisinga kortele: ${E.gpt_total} · paieškos klaidų: ${E.retrieval_total}/200`,el('div',{class:'ecards'},
+      ...E.gpt.map(c=>ec('GPT klaida (kortelė teisinga)','s-bad',c,c=>c.generated==='0'?'Modelis grįžta prie dažniausios mokymo reikšmės (0), užuot nukopijavęs retą kelių skaitmenų skaičių.':'Modelis nukopijavo tik dalį skaitmenų.')),
+      ...E.retrieval.map(c=>ec('Paieškos klaida','s-warn',c,c=>`Paieška grąžino ${c.retrieved_id} vietoj ${c.document_id} (${c.top3&&c.top3.length>1&&c.top3[0][1]===c.top3[1][1]?'vienodi balai – identiški pavadinimai':'panašus pavadinimas'}). GPT atsakė pagal gautą kortelę, todėl klaida – paieškos.`))))) }
+  if(d.personal){const P=d.personal;const ok=P.questions.filter(x=>x.correct).length;
+    box.append(card('Mano 10 klausimų',`${ok}/10 teisingi · šabloniniai ${P.questions.filter(x=>x.kind==='template'&&x.correct).length}/${P.questions.filter(x=>x.kind==='template').length} · laisvi ${P.questions.filter(x=>x.kind==='free'&&x.correct).length}/${P.questions.filter(x=>x.kind==='free').length}`,
+      tbl(['#','Tipas','Klausimas','Šaltinis','Laukta','GPT','Paieška'],P.questions.map((x,i)=>[i+1,(x.kind==='free'?'laisvas':'šablonas')+(x.expected==='unknown'?', neatsakomas':''),x.question+' – '+x.keywords,el('a',{href:x.source_url,target:'_blank',rel:'noopener',text:x.retrieved_doc}),x.expected,el('b',{style:`color:var(${x.correct?'--ok':'--bad'})`,text:(x.correct?'✓ ':'✗ ')+x.generated}),x.retrieval_ok?'teisinga':'kita kortelė']),[0]),
+      el('h3',{style:'margin:16px 0 6px',text:'Pakeisto fakto bandymas'}),
+      tbl(['Kortelė','Laukas','Buvo → pakeista','GPT su originalu','GPT su pakeitimu','Seka pakeitimą'],P.edited_facts.map(e=>[e.doc,e.field,`${e.original} → ${e.edited}`,e.answer_original,e.answer_edited,el('b',{style:`color:var(${e.follows_edit?'--ok':'--bad'})`,text:e.follows_edit?'taip':'ne'})]),[]),
+      el('p',{class:'note',text:'Mokymo duomenyse metai yra tik 2020–2025, todėl nematytų metų (pvz. 2019) modelis nesugeneruoja: metams jis elgiasi kaip matytų reikšmių klasifikatorius.'})))}
+  box.append(card('Ką parašiau ir pakeičiau','failai pakete',tbl(['Failas','Kas padaryta'],[
+    ['student_model.py','Attention: QKᵀ/√d, priežastinė kaukė prieš softmax (−∞), svertinė V suma, galvų sujungimas'],
+    ['student_search.py','Kosinusas su ε (nulinis vektorius → 0, ne NaN), stabilus rikiavimas, top‑k'],
+    ['ui.html','Ši sąsaja: 4 etapai, atsakymo būsena, kontekstas, tokenai, top‑3, klaidos, rezultatų skiltis'],
+    ['app.py','Pridėta: modelio įvestis tokenais ir /report (rezultatų skaitymas iš outputs/)'],
+    ['experiment.py','3 sąlygos + dauguma + taisyklė; paieškos ir GPT klaidų atskyrimas'],
+    ['repair_augment.py','Pataisymo eksperimentas: laukų tvarkos maišymas mokyme'],
+    ['personal_questions.py','10 savo klausimų ir pakeisto fakto bandymai'],
+    ['report_data.py','Surenka išsaugotus rezultatus šiai skilčiai']])));
+}
+
+}
+</script>
+</body>
+</html>
